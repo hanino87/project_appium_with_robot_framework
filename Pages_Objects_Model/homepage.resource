@@ -13,6 +13,7 @@ This is Variaables for start Iphone simulator iphone 16
 # ${ELEMENT_XPATH_SAFARI_APP_ICON}    //XCUIElementTypeIcon[@name="Safari"]
 ${ELEMENT_XPATH_SWAG_APP_ICON}    //XCUIElementTypeIcon[@name="SwagLabsMobileApp"]
 ${ELEMENT_XPATH_MAPS_APP_ICON}    (//XCUIElementTypeIcon[@name="Kartor"])[2]
+${ELEMENT_XPATH_SAFARI_APP_ICON}    //XCUIElementTypeIcon[@name="Safari"]
 
 ${PLATFORM_NAME}    iOS
 ${AUTOMATION_NAME}  XCUITest
@@ -23,13 +24,6 @@ ${URL}              http://127.0.0.1:4723
 ${APP_PATH}         /Users/hanino/appium/node_modules/appium-xcuitest-driver/node_modules/appium-webdriveragent/iOS.Simulator.SauceLabs.Mobile.Sample.app.2.7.1.app
 
 
-*** Comments ***
-
-Tests below for homepage on my iphone 16 simulator
-
-
-
-*** Keywords ***
 
 
 
