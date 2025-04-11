@@ -9,7 +9,7 @@ Resource   ../../Pages_Objects_Model/Swag_Labs_app_homepage.resource
 Resource   ../../Pages_Objects_Model/Swag_Labs_app_productpage.resource
 Resource   ../../Keyword/Keywords_Swag_Labs_homepage.resource
 Resource   ../../Keyword/keywords_Homepage.resource
-
+Resource   ../../Keyword/Keywords_Swag_Labs_Productpage.resource
 
 *** Variables ***
 
@@ -39,3 +39,13 @@ Login With Normal User
   When I Am On SwagLabs Homepage
   GIVEN Im Try To Login On The App With Third Username "${SWAG_LABS_USERNAME_1}" And password "${SWAG_LABS_PASSWORD}"
   Then I Should See List Of Available Products
+
+Click On A Prouct To View More Detail about it 
+  When I Am In Product View Page
+  Given I should be able to scroll up and down 
+  Then I should Click On Product Picture To Get More Information About It
+  AND I Can Go Back To See The Other Products And Logout From App
+
+
+ 
+

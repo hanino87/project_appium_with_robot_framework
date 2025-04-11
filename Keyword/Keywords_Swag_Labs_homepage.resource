@@ -75,7 +75,7 @@ I Will not See Lists Of Products
 I Should See List Of Available Products
    Wait Until Element Is Visible    ${SWAG_LABS_HOMEPAGE}  10 
    Page Should Contain Element   ${SWAG_LABS_HOMEPAGE}
-   Terminate Application    ${SWAG_APP_BUNDLE_ID}
+
 
 
 
