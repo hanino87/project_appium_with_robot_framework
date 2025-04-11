@@ -21,6 +21,21 @@ I Verify That My iPhone Is Running
 Login With Invalid Password
     Set Env Vars For Username 1 In Swaglabs
     WHEN I Am On SwagLabs Homepage
-    GIVEN Im Try To Login On The App With username "${SWAG_LABS_USERNAME_1}" and password "${BAD_PASSWORD}"
+    GIVEN Im Try To Login On The App With First Username "${SWAG_LABS_USERNAME_1}" And password "${BAD_PASSWORD}"
     Then I Should See Error Messages That Password Does Not Match My Username
     And I Will not See Lists Of Products
+
+Login With Lockedout Customer 
+  Set Env Vars For Username 2 In Swaglabs
+  Set Env Vars For Password In Swaglabs
+    WHEN I Am On SwagLabs Homepage
+    Given Im Try To Login On The App With Second Username "${SWAG_LABS_USERNAME_2}" And password "${SWAG_LABS_PASSWORD}"
+    Then I Should See Error Messages That Im Locked Out From System
+    AND I Will not See Lists Of Products
+
+Login With Normal User 
+  Set Env Vars For Password In Swaglabs
+  Set Env Vars For Username 1 In Swaglabs
+  When I Am On SwagLabs Homepage
+  GIVEN Im Try To Login On The App With Third Username "${SWAG_LABS_USERNAME_1}" And password "${SWAG_LABS_PASSWORD}"
+  Then I Should See List Of Available Products

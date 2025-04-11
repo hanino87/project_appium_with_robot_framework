@@ -8,7 +8,7 @@ Documentation  This is a resource file, that contains variables and  for Swaglab
 
 ${APP_BUNDLE_ID}     com.saucelabs.SwagLabsMobileApp
 
-${SWAG_LABS_HOMEPAGE}     Username Password LOGIN The currently accepted usernames for this application are (tap to autofill): standard_user locked_out_user problem_user And the password for all users is: secret_sauce Horizontal scroll bar, 1 page Vertical scroll bar, 2 pages
+${SWAG_LABS_HOMEPAGE}     //XCUIElementTypeStaticText[@name="PRODUCTS"]
 
 ${SWAG_LABS_CART_ICON}   //XCUIElementTypeOther[@name="test-Cart"]/XCUIElementTypeOther
 
