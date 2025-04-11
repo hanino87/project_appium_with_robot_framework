@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation     This is a resource file, that can contain variables and keywords for Safari app
+Documentation     This is a resource file, that contains variables and  for Safari app
 ...               on my iphone 
 ...  
 

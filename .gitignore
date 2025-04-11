@@ -2,3 +2,7 @@
 *.venv
 *.html
 *.xml
+*.mp4
+*.mmpeg
+*.env
+*.pyc

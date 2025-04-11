@@ -5,15 +5,15 @@ Documentation     This is a resource file, that can contain variables and keywor
 
 *** Comments ***
 
-This is Variaables for start Iphone simulator iphone 16 
+This is Variaables for start Iphone simulator iphone 16. Some variables  is taken from the XPATH Elements and others with ID from Appium Inspector
 
 
 *** Variables ***
 
-# ${ELEMENT_XPATH_SAFARI_APP_ICON}    //XCUIElementTypeIcon[@name="Safari"]
-${ELEMENT_XPATH_SWAG_APP_ICON}    //XCUIElementTypeIcon[@name="SwagLabsMobileApp"]
+${ELEMENT_XPATH_SWAG_LABS_APP_ICON}    //XCUIElementTypeIcon[@name="SwagLabsMobileApp"]
 ${ELEMENT_XPATH_MAPS_APP_ICON}    (//XCUIElementTypeIcon[@name="Kartor"])[2]
 ${ELEMENT_XPATH_SAFARI_APP_ICON}    //XCUIElementTypeIcon[@name="Safari"]
+${ID_HOMESCREEN_APP_ICONS}   Home screen icons
 
 ${PLATFORM_NAME}    iOS
 ${AUTOMATION_NAME}  XCUITest
@@ -22,6 +22,10 @@ ${UDID}             FDE4A732-C405-46BC-A037-984FDE52312C
 ${DEVICE_NAME}      iPhone 16
 ${URL}              http://127.0.0.1:4723
 ${APP_PATH}         /Users/hanino/appium/node_modules/appium-xcuitest-driver/node_modules/appium-webdriveragent/iOS.Simulator.SauceLabs.Mobile.Sample.app.2.7.1.app
+${APP_NAME}         SwagLabs Mobile App
+${SWAG_APP_BUNDLE_ID}    com.saucelabs.SwagLabsMobileApp
+${connect_hardware_keyboard}  true
+${new_command_timeout}     30000
 
 
 
