@@ -73,7 +73,7 @@ I Can Change Product View List Again
   Click Element  ${PRODUCT_CHANGE_VIEW_OF_PRODUCTS} 
   Terminate Application    ${SWAG_APP_BUNDLE_ID}
   
-
+  
 I Can Terminate The App And Dont See Products 
   Terminate Application    ${SWAG_APP_BUNDLE_ID}
   Page Should Not Contain Element  ${PRODUCT_2_IMAGE}

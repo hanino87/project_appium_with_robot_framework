@@ -12,9 +12,9 @@ ${TEXT_FIELD_USERNAME}   test-Username
 
 ${TEXT_FIELD_PASSWORD}   test-Password
 
-${ERROR_MESSAGES_WRONG_PASSWORD}   Password is required
+${ERROR_MESSAGES_NO_PASSWORD}   Password is required
 
-${ERROR_MESSAGES_WRONG_USERNAME}   Username is required
+${ERROR_MESSAGES_NO_USERNAME}   Username is required
 
 ${ERROR_MESSAGES_USER_LOCKED_OUT}   Sorry, this user has been locked out.
 
@@ -27,3 +27,7 @@ ${ELEMENT_XPATH_MESSAGE_ABOUT_LOGIN}  //XCUIElementTypeOther[@name="The currentl
 ${BAD_PASSWORD}  Badpassword
 
 ${BAD_USERNAME}  Badusername
+       
+${Scroll_Loginpage}  assets/src/img/login-bot.png
+
+${Text_About_Password}   And the password for all users is: secret_sauce
