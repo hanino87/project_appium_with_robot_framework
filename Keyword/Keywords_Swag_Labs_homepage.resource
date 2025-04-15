@@ -3,7 +3,7 @@ Library    AppiumLibrary
 Library    String
 Library    ../LoadEnv.py  # Ensure this path is correct
 Resource   ../Pages_Objects_Model/Swag_Labs_app_homepage.resource
-Resource   ../Pages_Objects_Model/Swag_Labs_app_productpage.resource
+Resource   ../Pages_Objects_Model/Swag_Labs_Productpage.resource
 Resource   ../Pages_Objects_Model/homepage.resource
 
 *** Keywords ***
@@ -73,8 +73,9 @@ I Will not See Lists Of Products
    Terminate Application    ${SWAG_APP_BUNDLE_ID}
 
 I Should See List Of Available Products
-   Wait Until Element Is Visible    ${SWAG_LABS_HOMEPAGE}  10 
+   Wait Until Element Is Visible    ${SWAG_LABS_HOMEPAGE}  10s
    Page Should Contain Element   ${SWAG_LABS_HOMEPAGE}
+   Sleep    10s
 
 
 
