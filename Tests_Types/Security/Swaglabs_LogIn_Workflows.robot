@@ -5,11 +5,11 @@ Documentation     This is a test suite for the login page in SwagLabs app
 Library    AppiumLibrary
 Library    String
 Library    ../../LoadEnv.py
-Resource   ../../Pages_Objects_Model/Swag_Labs_app_homepage.resource
-Resource   ../../Pages_Objects_Model/Swag_Labs_Productpage.resource
-Resource   ../../Keyword/Keywords_Swag_Labs_homepage.resource
-Resource   ../../Keyword/keywords_Homepage.resource
-Resource   ../../Keyword/Keywords_Swag_Labs_Productpage.resource
+Resource   ../../Pages_Objects_Model/Swag_Labs_App_Home_Page.resource
+Resource   ../../Pages_Objects_Model/Swag_Labs_Product_Page.resource
+Resource   ../../Keyword/Keywords_Swag_Labs_Home_Page.resource
+Resource   ../../Keyword/Keywords_Home_Page.resource
+Resource   ../../Keyword/Keywords_Swag_Labs_Product_Page.resource
 
 *** Test Cases ***
 
@@ -73,7 +73,7 @@ Validate That Password Word Is Not Visible On LoginPage
   Then I Should Not See Any Password Details 
 
  
-
+### TODO ### IMPLEMENT TEST THAT WHEN YOU TYPE IN YOUR PASSAWORD ITS MASKED
 
 
  

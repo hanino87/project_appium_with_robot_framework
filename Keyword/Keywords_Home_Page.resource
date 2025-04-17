@@ -4,7 +4,7 @@ Documentation     This is a resource file, that can contain variables and keywor
 ...               Keywords defined here can be used where this Keywords.resource in loaded.
 
 Library      AppiumLibrary
-Resource     ../Pages_Objects_Model/homepage.resource
+Resource     ../Pages_Objects_Model/Home_Page.resource
 
 
 
@@ -46,4 +46,48 @@ I Would See It Afterwards On My Device Screen
    Page Should Contain Element  ${ELEMENT_XPATH_SWAG_LABS_APP_ICON} 
 
 
+ I Am On A Page On My Iphone 
+  Log  I am just now on a page on my iphone 
 
+I Start To Swipe With My Fingers 
+  Log  I am just start to swipe 
+
+ I Start To Tap With My Fingers 
+  Log  I am just start to tap 
+
+
+I Should Be Able To Swipe Around Some Pages 
+  Swipe By Percent    10    50    90    50  ## SWIPE FROM LEFT TO RIGHT
+  Swipe By Percent    90    50    10    50  ## SWIPE FROM RIGHT TO LEFT 
+  Swipe By Percent    10    50    90    50  ## SWIPE FROM LEFT TO RIGHT
+  Swipe By Percent    90    50    10    50  ## SWIPE FROM RIGHT TO LEFT 
+  Swipe By Percent    90    50    10    50  ## SWIPE FROM RIGHT TO LEFT 
+
+I Should Be Able With Tap To Open Pictures App And Scrooling In It 
+  Tap With Number Of Taps  ${APP_LIBRARY_SEARCH_FIELD}  1  1  ## One Tap One Touch Point 
+  Tap With Number Of Taps   ${PICTURES_TYPECELL_ICON_APP}   1  1  ## One Tap One Touch Point 
+  Scroll Down    //XCUIElementTypeOther[@name="Vertikal rullningslist, 4 sidor"][2]
+  Scroll Down    //XCUIElementTypeOther[@name="Vertikal rullningslist, 4 sidor"][2]
+  Scroll Up    //XCUIElementTypeOther[@name="Vertikal rullningslist, 4 sidor"][2]
+  Scroll Up     //XCUIElementTypeOther[@name="Vertikal rullningslist, 4 sidor"][2]
+
+
+I Should Be Able With Tap To Open Pictures And Zooming With The Picture 
+  Wait Until Element Is Visible    //XCUIElementTypeScrollView[@name="LemonadeRootScrollView"]  
+  Element Should Be Enabled    //XCUIElementTypeScrollView[@name="LemonadeRootScrollView"]  
+  
+
+
+  
+
+
+
+
+
+
+### TODO ### IMPLEMENT FLICK TESTING Flick   100  100  100  400  FLICK THE SCREEN UPP MEANS YOU CAN FLICK AND GET A SEARCH OPTION IN YOUR IPHONE 
+
+#   Scroll Down   ${SCROLL_HOME_GRABBER}
+#   Scroll Up    ${SCROLL_HOME_GRABBER}
+  
+  

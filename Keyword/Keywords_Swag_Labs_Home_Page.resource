@@ -2,9 +2,9 @@
 Library    AppiumLibrary
 Library    String
 Library    ../LoadEnv.py  # Ensure this path is correct
-Resource   ../Pages_Objects_Model/Swag_Labs_app_homepage.resource
-Resource   ../Pages_Objects_Model/Swag_Labs_Productpage.resource
-Resource   ../Pages_Objects_Model/homepage.resource
+Resource   ../Pages_Objects_Model/Swag_Labs_App_Home_Page.resource
+Resource   ../Pages_Objects_Model/Swag_Labs_Product_Page.resource
+Resource   ../Pages_Objects_Model/Home_Page.resource
 
 *** Keywords ***
 
