@@ -12,7 +12,7 @@ This is Variaables for safari homepage app
 
 *** Variables ***
 
-${ELEMENT_XPATH_SAFARI_APP_ICON}    //XCUIElementTypeIcon[@name="Safari"]
+${SAFARI_APP_ICON}    //XCUIElementTypeIcon[@name="Safari"]
 ${ELEMENT_XPATH2}   //XCUIElementTypeOther[@name="CapsuleNavigationBar?isSelected=true&isDistractionControlOverlayUp=false"]
 ${ELEMENT_XPATH3}   //XCUIElementTypeApplication[@name="Safari"]/XCUIElementTypeWindow[3]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[1]
 ${ELEMENT_XPATH4}   //XCUIElementTypeButton[@name="CancelBarItemButton"]
@@ -44,7 +44,5 @@ I am on the login page and Click On Safari App Icon
 
 
 
-   # When I login with username "invalid" and password "invalid"
-   # Then I should see the error message
-   # And I should be able to login again
+ 
 

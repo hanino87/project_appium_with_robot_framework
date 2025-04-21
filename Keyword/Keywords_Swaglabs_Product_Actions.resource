@@ -20,7 +20,8 @@ I Can Add A Product To Cart
   Element Should Be Enabled   ${ADD_TO_CART_BUTTON1}
   Element Text Should Be    ${ADD_TO_CART_BUTTON1}    ADD TO CART
   Element Should Not Contain Text    ${ADD_TO_CART_BUTTON1}    REMOVE 
-  Click Element    ${ADD_TO_CART_BUTTON1}
+  Tap With Number Of Taps   ${ADD_TO_CART_BUTTON1}   1   1 
+  Element Should Not Contain Text    ${ADD_TO_CART_BUTTON1}    ADD TO CART
 
 I Can Verify That Its One Product In The Cart 
   Scroll Up  ${SWAG_LABS_CART_ICON_WITH_ONE_PRODUCT} 
@@ -35,6 +36,7 @@ I Can Verify That Its Three Product In The Cart
   Click Element   ${SWAG_LABS_CART_ICON_WITH_THREE_PRODUCTS}  
   log  I take a picture to confirm that i have 3 items in the cart 
   Capture Page Screenshot
+  Terminate Application    ${SWAG_APP_BUNDLE_ID}
 
 
 I Should Be Able To Click On The Cart Icon 
@@ -52,16 +54,16 @@ I Can Add Two More Product To My Cart With Diffrent Search Option
   Scroll Down   ${Swag_Labs_Scrool_Element}
   Scroll Down   ${Swag_Labs_Scrool_Element}
   Scroll Up    ${Swag_Labs_Scrool_Element}
-   Scroll Up    ${Swag_Labs_Scrool_Element}
+  Scroll Up    ${Swag_Labs_Scrool_Element}
   Wait Until Element Is Visible    ${PRODUCT2_IMAGE}   
-  Click Element  ${PRODUCT2_IMAGE}
+  Tap With Number Of Taps  ${PRODUCT2_IMAGE}  1  1 
   Scroll Down  ${PRODUCT2_IMAGE}
   element should be enabled  test-ADD TO CART  
-  Click Element    test-ADD TO CART  
+  Tap With Number Of Taps   test-ADD TO CART  1  1 
   Scroll Up      ${PRODUCT2_IMAGE}
   Wait Until Page Contains Element    ${BUTTON_BACK_TO_OTHER_PRODUCTS}
   Element Should Be Enabled     ${BUTTON_BACK_TO_OTHER_PRODUCTS}
-  Click Element   ${BUTTON_BACK_TO_OTHER_PRODUCTS}
+  Tap With Number Of Taps   ${BUTTON_BACK_TO_OTHER_PRODUCTS}  1  1 
   scroll up  ${SWAG_LABS_SCROOL_ELEMENT}
   Tap With Number Of Taps     ${PRODUCT_SELECTOR_BUTTON}     1  1
   Tap With Number Of Taps   ${DROPLIST_OPTION_SORT_PRICE_LOW_TO_HIGH}  1  1
@@ -71,13 +73,13 @@ I Can Add Two More Product To My Cart With Diffrent Search Option
   Scroll down   ${Swag_Labs_Scrool_Element}
   Scroll up   ${Swag_Labs_Scrool_Element}
   Wait Until Page Contains Element    ${PRODUCT3_IMAGE}
-  Click Element    ${PRODUCT3_IMAGE}
+  Tap With Number Of Taps    ${PRODUCT3_IMAGE}  1   1 
   Scroll Down  ${PRODUCT3_IMAGE}
   element should be enabled  test-ADD TO CART  
-  Click Element    test-ADD TO CART  
+  Tap With Number Of Taps   test-ADD TO CART   1  1 
   Scroll Up  ${PRODUCT3_IMAGE}
   Wait Until Page Contains Element    ${BUTTON_BACK_TO_OTHER_PRODUCTS}
-  Click Element    ${BUTTON_BACK_TO_OTHER_PRODUCTS}
+  Tap With Number Of Taps   ${BUTTON_BACK_TO_OTHER_PRODUCTS}  1  1 
 
 I Can Start Checkout And Fill In My Personal Details 
   Wait Until Page Contains Element   ${CHECKOUT_BUTTON}  

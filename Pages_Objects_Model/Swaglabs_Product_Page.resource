@@ -21,8 +21,6 @@ ${ADD_TO_CART_BUTTON1}   //XCUIElementTypeOther[@name="test-ADD TO CART"][1]  #
 
 ${ADD_TO_CART_BUTTON2}   test-ADD TO CART  
 
-# ${ADD_TO_CART_BUTTON3}   //XCUIElementTypeOther[@name="test-ADD TO CART"][3]  # 
-
 ${REMOVE_FROM_CART_BUTTON2}   (//XCUIElementTypeOther[@name="test-REMOVE"])[1]  # 
 
 ${PRODUCT1_IMAGE}       assets/src/img/sauce-backpack.jpg
@@ -31,13 +29,11 @@ ${PRODUCT2_IMAGE}      assets/src/img/red-tatt.jpg
 
 ${PRODUCT3_IMAGE}      assets/src/img/sauce-pullover.jpg
 
-
 ${PRODUCT1_TITLE}  Sauce Labs Backpack
 
 ${PRODUCT2_TITLE}  Test.allTheThings() T-Shirt (Red)
 
 ${PRODUCT3_TITLE}  Sauce Labs Fleece Jacket
-
 
 ${PRODUCT1_DESCRIPTION}   carry.allTheThings() with the sleek, streamlined Sly Pack that melds uncompromising style with unequaled laptop and tablet protection.
 

@@ -70,7 +70,7 @@ I Can Flip The Screen Up And Down Two Times
   Flick	100	100	100	400	# Flicks the screen up.
   Flick	140	400	100	100	# Flicks the screen down.
 
-I Can Flip The Screen Horizontal Back And Forward
+I Can Flick The Screen Horizontal Back And Forward
   Flick    100   200   500   200  ## Flick from Left (100) To Right (500)
   Flick    100   200   500   200  ## Flick from Left (100) To Right (500)
   Flick    500   300   100   200  ## Flick from Right (500) To Left (100)
@@ -81,8 +81,6 @@ I Can Flip The Screen Horizontal Back And Forward
 
 ### TODO ### IMPLEMENT FLICK TESTING Flick   100  100  100  400  FLICK THE SCREEN UPP MEANS YOU CAN FLICK AND GET A SEARCH OPTION IN YOUR IPHONE 
 
-#   Scroll Down   ${SCROLL_HOME_GRABBER}
-#   Scroll Up    ${SCROLL_HOME_GRABBER}
   
 ### SPlit THIS SImulate that this is how you do drag and dopr but i dont work on simulator 
 

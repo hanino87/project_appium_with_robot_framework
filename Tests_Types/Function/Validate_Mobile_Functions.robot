@@ -33,6 +33,9 @@ Resource  ../../Keyword/Keywords_Picture_App.resource
 
 ### TODO ### 
 
+## Validate Flick and Lock On Iphone 
+
+
 ###  1 IMPLEMENT TEST LOCK IPHONE AND THEN BE ABLE TO CONTINUE WITH WAS I WAS DOING ### 
 
  
