@@ -18,9 +18,8 @@ https://docs.robotframework.org/docs/testcase_styles/bdd
 
 ### Test Scoope 
 
-Native and Web apps in iOS 16 simulator devices 
+Native apps in iOS Iphone 16 Pro simulator devices 
 
 
 
-### Installation 
 

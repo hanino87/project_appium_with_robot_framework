@@ -2,8 +2,8 @@
 Library    AppiumLibrary
 Library    String
 Library    ../LoadEnv.py  # Ensure this path is correct
-Resource   ../Pages_Objects_Model/Swag_Labs_App_Home_Page.resource
-Resource   ../Pages_Objects_Model/Swag_Labs_Product_Page.resource
+Resource   ../Pages_Objects_Model/Swaglabs_App_Home_Page.resource
+Resource   ../Pages_Objects_Model/Swaglabs_Product_Page.resource
 Resource   ../Pages_Objects_Model/Home_Page.resource
 
 *** Keywords ***
@@ -80,6 +80,7 @@ Im Try To Login On The App With Password "${SWAG_LABS_PASSWORD}" And No Username
    Input Text    ${TEXT_FIELD_PASSWORD}   ${SWAG_LABS_PASSWORD}
    Click Element  ${LOGIN_BUTTON}
    Log To Console    I login with correct password but no username 
+   Capture Page Screenshot
 
 Im Try To Login On The App With Fifth Username "${BAD_USERNAME}" And No Password
    Click Element   ${ELEMENT_XPATH_SWAG_LABS_APP_ICON}
@@ -88,6 +89,7 @@ Im Try To Login On The App With Fifth Username "${BAD_USERNAME}" And No Password
    Input Text    ${TEXT_FIELD_USERNAME}   ${BAD_USERNAME}
    Click Element  ${LOGIN_BUTTON}
    Log To Console    I login with correct username but no password 
+   Capture Page Screenshot
 
 
 I Should See Error Messages That Im Locked Out From System 
@@ -133,10 +135,12 @@ I Try To Scrool on Loginpage
   Click Element  ${Scroll_Loginpage}
   Scroll Down    ${Scroll_Loginpage}
   Wait Until Element Is Visible    ${Text_About_Password} 
+  
 
 I Should Not See Any Password Details 
   Page Should Not Contain Text    secret_sauce 
- 
+  
+  
 
 
 

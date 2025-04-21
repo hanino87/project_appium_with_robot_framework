@@ -11,14 +11,17 @@ This is Variaables for start Iphone simulator iphone 16. Some variables  is take
 *** Variables ***
 
 ${ELEMENT_XPATH_SWAG_LABS_APP_ICON}    //XCUIElementTypeIcon[@name="SwagLabsMobileApp"]
-${ELEMENT_XPATH_MAPS_APP_ICON}    (//XCUIElementTypeIcon[@name="Kartor"])[2]
+${ELEMENT_XPATH_MAPS_APP_ICON}    //XCUIElementTypeIcon[@name="Kartor"][2]
 ${ELEMENT_XPATH_SAFARI_APP_ICON}    //XCUIElementTypeIcon[@name="Safari"]
+${ELEMENT_XPATH_FITNESS_APP_ICON}    //XCUIElementTypeIcon[@name="Fitness"]
 ${HEALT_APP_ICON}   //XCUIElementTypeIcon[@name="Hälsa"][3]
 ${ID_HOMESCREEN_APP_ICONS}   Home screen icons
 ${APP_LIBRARY_SEARCH_FIELD}  dewey-search-field
 ${SCROLL_HOME_GRABBER}   Home Grabber
 ${PICTURES_TYPECELL_ICON_APP}      //XCUIElementTypeCell[@name="Bilder"]
 ${INDEX_OF_APPS_SCROLLBAR}    Avsnittsindex
+${SAFARI_BUNDLE_ID}          com.apple.mobilesafari
+${PICTURE_BUNDLE_ID}         com.apple.mobileslideshow
 
 ${PLATFORM_NAME}    iOS
 ${AUTOMATION_NAME}  XCUITest

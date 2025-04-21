@@ -1,16 +1,15 @@
 
 *** Settings ***
-Documentation     This is a resource file, that can contain variables and keywords.
-...               Keywords defined here can be used where this Keywords.resource in loaded.
+Documentation     This is a resource file, that contains variables for homepage 
 
 Library      AppiumLibrary
 Resource     ../Pages_Objects_Model/Home_Page.resource
 
 
-
 *** Comments ***
 
 Below is keyword metods to handle installation of Iphone and Swag Labs app 
+
 *** Keywords ***
 
 I Press Start Button On My Iphone
@@ -55,6 +54,8 @@ I Start To Swipe With My Fingers
  I Start To Tap With My Fingers 
   Log  I am just start to tap 
 
+I Start To Flick With My Fingers 
+  Log  I am just start to flich 
 
 I Should Be Able To Swipe Around Some Pages 
   Swipe By Percent    10    50    90    50  ## SWIPE FROM LEFT TO RIGHT
@@ -63,25 +64,18 @@ I Should Be Able To Swipe Around Some Pages
   Swipe By Percent    90    50    10    50  ## SWIPE FROM RIGHT TO LEFT 
   Swipe By Percent    90    50    10    50  ## SWIPE FROM RIGHT TO LEFT 
 
-I Should Be Able With Tap To Open Pictures App And Scrooling In It 
-  Tap With Number Of Taps  ${APP_LIBRARY_SEARCH_FIELD}  1  1  ## One Tap One Touch Point 
-  Tap With Number Of Taps   ${PICTURES_TYPECELL_ICON_APP}   1  1  ## One Tap One Touch Point 
-  Scroll Down    //XCUIElementTypeOther[@name="Vertikal rullningslist, 4 sidor"][2]
-  Scroll Down    //XCUIElementTypeOther[@name="Vertikal rullningslist, 4 sidor"][2]
-  Scroll Up    //XCUIElementTypeOther[@name="Vertikal rullningslist, 4 sidor"][2]
-  Scroll Up     //XCUIElementTypeOther[@name="Vertikal rullningslist, 4 sidor"][2]
+I Can Flip The Screen Up And Down Two Times
+  Flick	100	100	100	400	# Flicks the screen up.
+  Flick	140	400	100	100	# Flicks the screen down.
+  Flick	100	100	100	400	# Flicks the screen up.
+  Flick	140	400	100	100	# Flicks the screen down.
 
-
-I Should Be Able With Tap To Open Pictures And Zooming With The Picture 
-  Wait Until Element Is Visible    //XCUIElementTypeScrollView[@name="LemonadeRootScrollView"]  
-  Element Should Be Enabled    //XCUIElementTypeScrollView[@name="LemonadeRootScrollView"]  
-  
-
-
-  
-
-
-
+I Can Flip The Screen Horizontal Back And Forward
+  Flick    100   200   500   200  ## Flick from Left (100) To Right (500)
+  Flick    100   200   500   200  ## Flick from Left (100) To Right (500)
+  Flick    500   300   100   200  ## Flick from Right (500) To Left (100)
+  Flick    100   200   500   200  ## Flick from Left (100) To Right (500)
+  Flick    500   300   100   200  ## Flick from Right (500) To Left (100)
 
 
 
@@ -90,4 +84,32 @@ I Should Be Able With Tap To Open Pictures And Zooming With The Picture
 #   Scroll Down   ${SCROLL_HOME_GRABBER}
 #   Scroll Up    ${SCROLL_HOME_GRABBER}
   
-  
+### SPlit THIS SImulate that this is how you do drag and dopr but i dont work on simulator 
+
+# Drag And Drop Using Elements Without Show It On The Simulator Device 
+#     # Wait for the elements to be visible
+#     Wait Until Element Is Visible  ${ELEMENT_XPATH_SWAG_LABS_APP_ICON}
+#     Wait Until Element Is Visible  ${ELEMENT_XPATH_SAFARI_APP_ICON}
+
+#     # Capture the initial position of the SwagLabs App Icon (before the drag)
+#     ${initial_position}=  AppiumLibrary.Get Element Location  ${ELEMENT_XPATH_SWAG_LABS_APP_ICON}
+#     Log  Initial Position: ${initial_position}
+
+#    ${initial_position}=  AppiumLibrary.Get Element Location   ${ELEMENT_XPATH_FITNESS_APP_ICON}  
+#     Log  Initial Position: ${initial_position}
+
+#     # Perform scroll down to ensure the element is visible if it's off-screen
+#     Scroll Down  ${ELEMENT_XPATH_SWAG_LABS_APP_ICON}
+
+#     # Perform drag and drop by element locator (from source to target)
+#     AppiumLibrary.Drag And Drop  ${ELEMENT_XPATH_SWAG_LABS_APP_ICON}   ${ELEMENT_XPATH_FITNESS_APP_ICON}      
+
+#     # Capture the final position of the SwagLabs App Icon (after the drag)
+#     ${final_position}=  AppiumLibrary.Get Element Location  ${ELEMENT_XPATH_SWAG_LABS_APP_ICON}
+#     Log  Final Position: ${final_position}
+
+#     # Optionally, compare the initial and final positions to ensure it was moved
+#     Run Keyword If  ${initial_position['x']} != ${final_position['x']}  Log  The element has moved in the X direction.
+#     Run Keyword If  ${initial_position['y']} != ${final_position['y']}  Log  The element has moved in the Y direction.
+#     Run Keyword If  ${initial_position['x']} == ${final_position['x']}  Log  The element has not moved in the X direction.
+#     Run Keyword If  ${initial_position['y']} == ${final_position['y']}  Log  The element has not moved in the Y direction.

@@ -1,3 +1,5 @@
+# THIS IS  A PYTHON FILE THAT LOADS ENV VARIABLE INTO ROBOT FRAMEWORK FOR SOME TEST 
+
 from dotenv import load_dotenv, dotenv_values
 import os
 
