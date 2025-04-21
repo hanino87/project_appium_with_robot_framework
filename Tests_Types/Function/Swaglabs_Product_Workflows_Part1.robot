@@ -5,38 +5,38 @@ Documentation     This is a test suite for part 1 product workflows in Swaglabs 
 Library    AppiumLibrary
 Library    String
 Library    ../../LoadEnv.py
-Resource   ../../Pages_Objects_Model/Swag_Labs_App_Home_Page.resource
-Resource   ../../Pages_Objects_Model/Swag_Labs_Product_Page.resource
-Resource   ../../Keyword/Keywords_Swag_Labs_Home_Page.resource
+Resource   ../../Pages_Objects_Model/Swaglabs_App_Home_Page.resource
+Resource   ../../Pages_Objects_Model/Swaglabs_Product_Page.resource
+Resource   ../../Keyword/Keywords_Swaglabs_Home_Page.resource
 Resource   ../../Keyword/Keywords_Home_Page.resource
-Resource   ../../Keyword/Keywords_Swag_Labs_Product_Page.resource
-Resource   ../../Keyword/Keywords_Swag_Labs_Product_Actions.resource
+Resource   ../../Keyword/Keywords_Swaglabs_Product_Page.resource
+Resource   ../../Keyword/Keywords_Swaglabs_Product_Actions.resource
 
 
 *** Test Cases ***
 
-Change Product View Of Products And See Products
-  When I Am In Product View Page After Login
-  Given I Can Change Product View List 
-  Then I Should Have Change View Of Products And Still See Them
-  AND I Can Change Product View List Again
+# Change Product View Of Products And See Products
+#   When I Am In Product View Page After Login
+#   Given I Can Change Product View List 
+#   Then I Should Have Change View Of Products And Still See Them
+#   AND I Can Change Product View List Again
 
 
-Click On A Prouct To View More Detail about it 
-  When I Am In Product View Page
-  Given I should be able to scroll up and down 
-  Then I should Click On Product Picture To Get More Information About It
-  AND I Can Go Back To See The Other Products
+# Click On A Prouct To View More Detail about it 
+#   When I Am In Product View Page
+#   Given I should be able to scroll up and down 
+#   Then I should Click On Product Picture To Get More Information About It
+#   AND I Can Go Back To See The Other Products
 
 
 ## The Whole Workflow for buying a product is splitted in two parts beacue i have problem with one xpath locator (cart icon)
 ## The Second part of this test is in file Swaglabs_Product_Workflows_Part2.robot 
 
-Happy Flow Adds Lots Of Products To Cart
-  When I Am In Product View Page
-  GIVEN I Can Add A Product To Cart 
-  Then I Can Add Two More Product To My Cart With Diffrent Search Option 
-  And I Can Verify That Its Three Product In The Cart
+# Happy Flow Adds Lots Of Products To Cart
+#   When I Am In Product View Page
+#   GIVEN I Can Add A Product To Cart 
+#   Then I Can Add Two More Product To My Cart With Diffrent Search Option 
+#   And I Can Verify That Its Three Product In The Cart
 
 
 

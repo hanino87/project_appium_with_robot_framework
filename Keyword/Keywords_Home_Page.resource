@@ -77,12 +77,21 @@ I Can Flick The Screen Horizontal Back And Forward
   Flick    100   200   500   200  ## Flick from Left (100) To Right (500)
   Flick    500   300   100   200  ## Flick from Right (500) To Left (100)
 
+I Flick The screen up
+  Flick	100	100	100	400	# Flicks the screen up.
+
+I Open Upp Safari App And Do Search
+  Wait Until Element Is Visible    ${SPOTLIGHT_SEARCH_FIELD}
+  Element Should Be Enabled    ${SPOTLIGHT_SEARCH_FIELD}    
+  Input Text    ${SPOTLIGHT_SEARCH_FIELD}   g
+  Tap With Number Of Taps  ${CLEAR_SPOTLIGHT_SEARCH_FIELD}   1    1
+  Tap With Number Of Taps    ${SPOTLIGHT_SEARCH_FIELD}       1    1
+  Input Text   ${SPOTLIGHT_SEARCH_FIELD}      Safari 
+  Wait Until Element Is Visible    ${SAFARI_SEARCH_RESULT}  
+  Tap With Number Of Taps  ${SAFARI_SEARCH_RESULT}   1   1
 
 
-### TODO ### IMPLEMENT FLICK TESTING Flick   100  100  100  400  FLICK THE SCREEN UPP MEANS YOU CAN FLICK AND GET A SEARCH OPTION IN YOUR IPHONE 
-
-  
-### SPlit THIS SImulate that this is how you do drag and dopr but i dont work on simulator 
+### SPlit THIS SImulate that this is how you do drag and drop but i dont work on simulator 
 
 # Drag And Drop Using Elements Without Show It On The Simulator Device 
 #     # Wait for the elements to be visible

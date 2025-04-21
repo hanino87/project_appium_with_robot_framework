@@ -22,6 +22,9 @@ ${PICTURES_TYPECELL_ICON_APP}      //XCUIElementTypeCell[@name="Bilder"]
 ${INDEX_OF_APPS_SCROLLBAR}    Avsnittsindex
 ${SAFARI_BUNDLE_ID}          com.apple.mobilesafari
 ${PICTURE_BUNDLE_ID}         com.apple.mobileslideshow
+${SPOTLIGHT_SEARCH_FIELD}   //XCUIElementTypeTextField[@name="SpotlightSearchField"]/XCUIElementTypeOther
+${CLEAR_SPOTLIGHT_SEARCH_FIELD}  Rensa text
+${SAFARI_SEARCH_RESULT}     //XCUIElementTypeIcon[@name="Safari"]/XCUIElementTypeOther[3]
 
 ${PLATFORM_NAME}    iOS
 ${AUTOMATION_NAME}  XCUITest

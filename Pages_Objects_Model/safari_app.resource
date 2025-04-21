@@ -13,34 +13,17 @@ This is Variaables for safari homepage app
 *** Variables ***
 
 ${SAFARI_APP_ICON}    //XCUIElementTypeIcon[@name="Safari"]
-${ELEMENT_XPATH2}   //XCUIElementTypeOther[@name="CapsuleNavigationBar?isSelected=true&isDistractionControlOverlayUp=false"]
+${SAFARI_SEARCH_FIELD}   //XCUIElementTypeOther[@name="CapsuleViewController"]/XCUIElementTypeOther/XCUIElementTypeOther[1]/XCUIElementTypeOther[2]/XCUIElementTypeOther[1]
 ${ELEMENT_XPATH3}   //XCUIElementTypeApplication[@name="Safari"]/XCUIElementTypeWindow[3]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[1]
 ${ELEMENT_XPATH4}   //XCUIElementTypeButton[@name="CancelBarItemButton"]
+${GOOGEL_TEXT_READ_MORE}    Läs mer
+${GOOGEL_BUTTON_APPROVE_ALL}  Godkänn alla
+${HAMMARBY_SEARCH_RESULT}   Hammarby 
+${CLEAR_SEARCH_BUTTON}  ClearTextButton
 
 
-*** Comments ***
-
-This is keywords for safari homepage app 
-
-*** Keywords ***
-I am on the login page and Click On Safari App Icon
-    Log To Console    I am on the login page
-
-# I on Hammarby Fotboll In Search Field 
-
-# I Should see search result of Hammarby Fotboll 
-
-# I Should be able to scrolling around the search results 
 
 
-# Put In Text Search Field Regret and do serach again 
-#   Element Should Be Visible    ${ELEMENT_XPATH2}  
-#   Click Element    ${ELEMENT_XPATH2}  
-#   Input Text    ${ELEMENT_XPATH3}     Hammarby 
-#   Click Element  ${Button_Idname} 
-#   Click Element   ${ELEMENT_XPATH2}
-#   Input Text    ${ELEMENT_XPATH3}     Hammarby 2
-#   Lock          10
 
 
 

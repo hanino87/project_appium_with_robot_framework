@@ -10,6 +10,7 @@ Resource  ../../Pages_Objects_Model/Home_Page.resource
 Resource  ../../Pages_Objects_Model/Picture_App.resource
 Resource  ../../Keyword/Keywords_Home_Page.resource
 Resource  ../../Keyword/Keywords_Picture_App.resource
+Resource  ../../Keyword/Keywords_Safari_Home_Page.resource
 
 *** Test Cases ***
    
@@ -30,6 +31,14 @@ Resource  ../../Keyword/Keywords_Picture_App.resource
 #   Then I Can Flip The Screen Horizontal Back And Forward
 #   AND I Can Flip The Screen Up And Down Two Times
   
+Flick Screen Up And Down
+  Flick    100    100   100   400
+  I Open Upp Safari App And Do Search
+  I Should Be Able To Search for Hammarby 
+  I Lock My Iphone And my Search Result Is Still There
+  I Clear The Search And Terminate The App
+
+ 
 
 ### TODO ### 
 

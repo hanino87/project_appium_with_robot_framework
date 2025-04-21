@@ -70,8 +70,7 @@ I Can Change Product View List Again
   Element Should Be Visible    ${PRODUCT_CHANGE_VIEW_OF_PRODUCTS} 
   Element Should Be Enabled    ${PRODUCT_CHANGE_VIEW_OF_PRODUCTS} 
   Click Element  ${PRODUCT_CHANGE_VIEW_OF_PRODUCTS} 
-  # Terminate Application    ${SWAG_APP_BUNDLE_ID}
-  
+ 
   
 I Can Terminate The App And Dont See Products 
   Terminate Application    ${SWAG_APP_BUNDLE_ID}
