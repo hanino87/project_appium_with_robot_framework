@@ -18,6 +18,7 @@ ${ELEMENT_XPATH3}   //XCUIElementTypeApplication[@name="Safari"]/XCUIElementType
 ${ELEMENT_XPATH4}   //XCUIElementTypeButton[@name="CancelBarItemButton"]
 ${HAMMARBY_SEARCH_RESULT}   Hammarby 
 ${CLEAR_SEARCH_BUTTON}  ClearTextButton
+${SAFARI_BUNDLE_ID}    com.apple.mobilesafari
 
 
 

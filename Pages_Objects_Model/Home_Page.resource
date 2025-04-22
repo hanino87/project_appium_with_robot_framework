@@ -10,7 +10,7 @@ Library    OperatingSystem  # LIBRARY TO EXECUTE SYSTEM COMMANDS
 ${RECORD_FILENAME}   exploratory_testing
 
 ${ELEMENT_XPATH_SWAG_LABS_APP_ICON}    //XCUIElementTypeIcon[@name="SwagLabsMobileApp"]
-${ELEMENT_XPATH_MAPS_APP_ICON}    //XCUIElementTypeIcon[@name="Kartor"][2]
+${MAPS_APP_ICON}    //XCUIElementTypeIcon[@name="Kartor"][2]
 ${ELEMENT_XPATH_SAFARI_APP_ICON}    //XCUIElementTypeIcon[@name="Safari"]
 ${ID_HOMESCREEN_APP_ICONS}   Home screen icons
 ${APP_LIBRARY_SEARCH_FIELD}  dewey-search-field

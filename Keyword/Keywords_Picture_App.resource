@@ -6,6 +6,7 @@ Documentation     This is a resource file, that can contains keywords For Pictur
 Library      AppiumLibrary
 Resource     ../Pages_Objects_Model/Home_Page.resource
 Resource     ../Pages_Objects_Model/Picture_App.resource
+Resource     ../Pages_Objects_Model/Map_App.resource
 
 
 *** Keywords ***

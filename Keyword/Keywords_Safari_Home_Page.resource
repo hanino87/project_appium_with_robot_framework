@@ -1,15 +1,11 @@
 
 *** Settings ***
-Documentation     This is a resource file, that contains variables for homepage for Safari app 
+Documentation     This is a resource file, that contains keywords for homepage for Safari app 
 
 Library      AppiumLibrary
 Resource     ../Pages_Objects_Model/Home_Page.resource
 Resource    ../Pages_Objects_Model/Safari_App.resource
 
-
-*** Comments ***
-
-Below is keyword metods to handle installation of Iphone and Swag Labs app 
 
 *** Keywords ***
 

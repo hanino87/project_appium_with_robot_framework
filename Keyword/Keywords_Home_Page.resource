@@ -1,14 +1,10 @@
 
 *** Settings ***
-Documentation     This is a resource file, that contains variables for homepage 
+Documentation     This is a resource file, that contains keywords for homepage screen on Iphone
 
 Library      AppiumLibrary
 Resource     ../Pages_Objects_Model/Home_Page.resource
-
-
-*** Comments ***
-
-Below is keyword metods to handle installation of Iphone and Swag Labs app and for mobile functions
+Resource     ../Pages_Objects_Model/Map_App.resource
 
 *** Keywords ***
 
@@ -102,6 +98,9 @@ Stop Recording Of My Test On The Screen
   Sleep  10s 
   Log to console  Now we have stopped the recording Go and See file ${RECORD_FILENAME} for more details 
 
+I Can Tap On Map Widget Icon On My Screen 
+  Swipe By Percent    10    50    90    50
+  Tap With Number Of Taps    ${MAPS_WIDGET_ICON}   1   1
 
 
 ### SPlit THIS SImulate that this is how you do drag and drop but i dont work on simulator 
