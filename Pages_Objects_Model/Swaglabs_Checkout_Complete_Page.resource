@@ -10,4 +10,4 @@ ${TEXT_ORDER_CONFIRMATION}  THANK YOU FOR YOU ORDER Your order has been dispatch
 
 ${BACK_HOME_BUTTON}       test-BACK HOME
 
-${WRONG_TEXT_FOR_ORDER}   Sorry your ordet can´t be delivered beacue we have technical error 
+${WRONG_TEXT_FOR_ORDER}   Sorry your ordet can´t be delivered beacuse we have technical error 

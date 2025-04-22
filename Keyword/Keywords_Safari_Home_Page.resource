@@ -18,7 +18,7 @@ I Should Be Able To Search for Hammarby
   Tap With Number Of Taps    ${SAFARI_SEARCH_FIELD}    1    1
   Input Text    ${SAFARI_SEARCH_FIELD}    Hammarby 
 
-I Lock My Iphone And my Search Result Is Still There
+I Should Be Able To Lock My Iphone And When I Unlock The Search Result Is Visible 
   Lock  100s 
   Wait Until Element Is Visible  ${HAMMARBY_SEARCH_RESULT}
   Page Should Contain Element    ${HAMMARBY_SEARCH_RESULT}
@@ -26,7 +26,7 @@ I Lock My Iphone And my Search Result Is Still There
   Log  I have still my Hammarby search result after i loocked my iphone
   Capture Page Screenshot
 
-I Clear The Search And Terminate The App
+I Can Clear The Search And Terminate The App
   Click Element    ${CLEAR_SEARCH_BUTTON}
   Terminate Application    ${SAFARI_BUNDLE_ID}        
 

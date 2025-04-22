@@ -1,23 +1,19 @@
 *** Settings ***
-Documentation     This is a resource file, that can contain variables and keywords for homepage
-...               on my iphone and startupp settings that is necessary to start my Iphone
+Documentation     This is a resource file, that can contain variables for homepage
+...               on my iphone for startupp settings and some mobile functions on my Iphone 
 ...    
-
-*** Comments ***
-
-This is Variaables for start Iphone simulator iphone 16. Some variables  is taken from the XPATH Elements and others with ID from Appium Inspector
+Library    OperatingSystem  # LIBRARY TO EXECUTE SYSTEM COMMANDS
 
 
 *** Variables ***
 
+${RECORD_FILENAME}   exploratory_testing
+
 ${ELEMENT_XPATH_SWAG_LABS_APP_ICON}    //XCUIElementTypeIcon[@name="SwagLabsMobileApp"]
 ${ELEMENT_XPATH_MAPS_APP_ICON}    //XCUIElementTypeIcon[@name="Kartor"][2]
 ${ELEMENT_XPATH_SAFARI_APP_ICON}    //XCUIElementTypeIcon[@name="Safari"]
-${ELEMENT_XPATH_FITNESS_APP_ICON}    //XCUIElementTypeIcon[@name="Fitness"]
-${HEALT_APP_ICON}   //XCUIElementTypeIcon[@name="Hälsa"][3]
 ${ID_HOMESCREEN_APP_ICONS}   Home screen icons
 ${APP_LIBRARY_SEARCH_FIELD}  dewey-search-field
-${SCROLL_HOME_GRABBER}   Home Grabber
 ${PICTURES_TYPECELL_ICON_APP}      //XCUIElementTypeCell[@name="Bilder"]
 ${INDEX_OF_APPS_SCROLLBAR}    Avsnittsindex
 ${SAFARI_BUNDLE_ID}          com.apple.mobilesafari
@@ -37,6 +33,10 @@ ${APP_NAME}         SwagLabs Mobile App
 ${SWAG_APP_BUNDLE_ID}    com.saucelabs.SwagLabsMobileApp
 ${connect_hardware_keyboard}  true
 ${new_command_timeout}     30000
+
+
+
+
 
 
 

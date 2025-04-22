@@ -5,11 +5,11 @@ Documentation     This is a test suite for the login page in SwagLabs app
 Library    AppiumLibrary
 Library    String
 Library    ../../LoadEnv.py
-Resource   ../../Pages_Objects_Model/Swag_Labs_App_Home_Page.resource
-Resource   ../../Pages_Objects_Model/Swag_Labs_Product_Page.resource
-Resource   ../../Keyword/Keywords_Swag_Labs_Home_Page.resource
+Resource   ../../Pages_Objects_Model/Swaglabs_App_Home_Page.resource
+Resource   ../../Pages_Objects_Model/Swaglabs_Product_Page.resource
+Resource   ../../Keyword/Keywords_Swaglabs_Home_Page.resource
 Resource   ../../Keyword/Keywords_Home_Page.resource
-Resource   ../../Keyword/Keywords_Swag_Labs_Product_Page.resource
+Resource   ../../Keyword/Keywords_Swaglabs_Product_Page.resource
 
 *** Test Cases ***
 
@@ -22,6 +22,7 @@ Login With Invalid Password
     GIVEN Im Try To Login On The App With First Username "${SWAG_LABS_USERNAME_1}" And password "${BAD_PASSWORD}"
     Then I Should See Error Messages That Password Does Not Match My Username
     And I Will not See Lists Of Products 
+    
 Login With Invalid Username
     Set Env Vars For Password In Swaglabs
     WHEN I Am On SwagLabs Loginpage

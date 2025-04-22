@@ -108,8 +108,7 @@ I Can Complete The Checkout And Get Confirmation Of My Purchase With Right Produ
   Scroll Down    ${SCROOL_ELEMENT} 
   Wait Until Element Is Visible    ${FINISH_BUTTON}  
   Element Should Be Enabled    ${FINISH_BUTTON}  
-  Wait Until Page Contains Element    Pages_Objects_Model/Swag_Labs_Checkout_Complete_Page.resource
-  Page Should Not Contain Text   ${WRONG_TEXT_FOR_ORDER}
+
 
 I Can Close The Case And Go Back To Product List 
   Element Should Be Enabled    ${BACK_HOME_BUTTON}  

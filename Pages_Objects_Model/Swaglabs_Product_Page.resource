@@ -41,12 +41,6 @@ ${PRODUCT2_DESCRIPTION}  This classic Sauce Labs t-shirt is perfect to wear when
 
 ${PRODUCT3_DESCRIPTION}   It's not every day that you come across a midweight quarter-zip fleece jacket capable of handling everything from a relaxing day outdoors to a busy day at the office.
 
-# ${PRODUCT1_PRICE}
-
-# ${PRODUCT2_PRICE}
-
-# ${PRODUCT3_PRICE}
-
 ${SWAG_LABS_SCROOL_ELEMENT}        SwagLabsMobileApp
     
 ${SWAG_LABS_LOGOUT_ICON}  //XCUIElementTypeOther[@name="Username Password LOGIN The currently accepted usernames for this application are (tap to autofill): standard_user locked_out_user problem_user And the password for all users is: secret_sauce Horizontal scroll bar, 1 page Vertical scroll bar, 2 pages"]

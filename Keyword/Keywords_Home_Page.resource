@@ -8,7 +8,7 @@ Resource     ../Pages_Objects_Model/Home_Page.resource
 
 *** Comments ***
 
-Below is keyword metods to handle installation of Iphone and Swag Labs app 
+Below is keyword metods to handle installation of Iphone and Swag Labs app and for mobile functions
 
 *** Keywords ***
 
@@ -43,7 +43,6 @@ I Should Be Able To Terminate The App After Installation
 
 I Would See It Afterwards On My Device Screen
    Page Should Contain Element  ${ELEMENT_XPATH_SWAG_LABS_APP_ICON} 
-
 
  I Am On A Page On My Iphone 
   Log  I am just now on a page on my iphone 
@@ -80,7 +79,8 @@ I Can Flick The Screen Horizontal Back And Forward
 I Flick The screen up
   Flick	100	100	100	400	# Flicks the screen up.
 
-I Open Upp Safari App And Do Search
+I Open Upp Safari With Flick App Can Do Search
+  I Flick The screen up
   Wait Until Element Is Visible    ${SPOTLIGHT_SEARCH_FIELD}
   Element Should Be Enabled    ${SPOTLIGHT_SEARCH_FIELD}    
   Input Text    ${SPOTLIGHT_SEARCH_FIELD}   g
@@ -89,6 +89,19 @@ I Open Upp Safari App And Do Search
   Input Text   ${SPOTLIGHT_SEARCH_FIELD}      Safari 
   Wait Until Element Is Visible    ${SAFARI_SEARCH_RESULT}  
   Tap With Number Of Taps  ${SAFARI_SEARCH_RESULT}   1   1
+
+Start Video of My Test on The Screen 
+  Sleep  30s  ## Good To Have so you can start the recording from where you want 
+  Log To Console   Now we start the recording start test  ## Good to have a message to view in console then you know when to start testing 
+  Start Screen Recording   160s 
+  Sleep  160s
+  Log To Console  Okay now time is out stop testing 
+
+Stop Recording Of My Test On The Screen
+  Stop Screen Recording  ${RECORD_FILENAME} 
+  Sleep  10s 
+  Log to console  Now we have stopped the recording Go and See file ${RECORD_FILENAME} for more details 
+
 
 
 ### SPlit THIS SImulate that this is how you do drag and drop but i dont work on simulator 

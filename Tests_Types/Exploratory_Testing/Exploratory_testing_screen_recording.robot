@@ -1,23 +1,21 @@
 *** Settings ***
-Documentation     
+Documentation     Saves screen recording for test that did`nt work for Iphone simulator 
 ...               iPhone: requires ffmpeg installed on Mac where phones are conneted. Run: brew install ffmpeg
-...              
-Library  AppiumLibrary
-Library  String
-Resource  ../../Pages_Objects_Model/homepage.resource
-Resource  ../../Keyword/keywords_Homepage.resource
+...               Android: recording is not working in all phones (does not cause test failures if recording is not supported)
+...               ffplay appium-screenrecord-10.ffmpeg is command to view video from command line 
 
+Library           BuiltIn
+Library           OperatingSystem
+Library           AppiumLibrary
+Resource  ../../Pages_Objects_Model/Home_Page.resource
+Resource  ../../Keyword/Keywords_Home_Page.resource
 
+*** Test Cases ***
 
-
-# Remove Screen Recording If Pass
-#     ${filename}                     Stop Screen Recording
-#     Run Keyword If Test Passed      Remove File     ${filename}
-#     Run Keyword If Test Passed      Log             Screen recording not saved because test execution passed.
-
-# # Start Vidoe of My Test on The Screen 
-# #   Start Screen Recording   
-#   Sleep    180s
-#   Stop Screen Recording  ${Screen_Recorded_File} 
-
-
+  
+Validate I Can Start And Stop Screen Recording 
+  When I Start The Iphone   ${URL}    platform_name=${PLATFORM_NAME}    automation_name=${AUTOMATION_NAME}    platform_version=${PLATFORM_VERSION}    device_name=${DEVICE_NAME}    new_command_timeout=0    connect_hardware_keyboard=${True}    udid=${UDID}  
+  Given I Am On A Page On My Iphone 
+  Then Start Video of My Test on The Screen 
+  AND Stop Recording Of My Test On The Screen
+  
