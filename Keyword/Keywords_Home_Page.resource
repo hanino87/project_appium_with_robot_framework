@@ -32,6 +32,7 @@ I Start Installation Of My App It Should Be Installed
    [Arguments]    ${url}    ${platform_name}    ${automation_name}    ${platform_version}    ${device_name}    ${new_command_timeout}    ${connect_hardware_keyboard}    ${udid}    ${app_path}
     Open Application    ${url}    platformName=${platform_name}    automationName=${automation_name}    platformVersion=${platform_version}    deviceName=${device_name}    newCommandTimeout=${new_command_timeout}    connectHardwareKeyboard=${connect_hardware_keyboard}    udid=${udid}    app=${app_path}
     Log to Console     I have now Installed My ${device_name} now we can start testing the App
+    Capture Page Screenshot   #Take a screenshot to show as evidence that the app now is on my device 
   
 I Should Be Able To Terminate The App After Installation 
   Terminate Application       ${SWAG_APP_BUNDLE_ID}
@@ -54,6 +55,9 @@ I Start To Flick With My Fingers
 
 I Start To Shake My Iphone 
   Log  I Start To Shake My Iphone 
+
+I Start To Drag And Drop One App 
+  Log  I Start To Drag And Drop The App
 
 I Should Be Able To Swipe Around Some Pages 
   Swipe By Percent    10    50    90    50  ## SWIPE FROM LEFT TO RIGHT
@@ -123,7 +127,7 @@ I Can Change My Iphone To Landscape Position
 
 # THIS IS HOW YOU DO DRAG AND DROP ON THE IPHONE BUT IT DON´T WORK ON IPHONE
 
-Drag And Drop Using Elements Without Show It On The Simulator Device 
+I Should Be Able to Drag And Drop Apps On Device 
 
     # Wait for the elements to be visible
     Wait Until Element Is Visible  ${ELEMENT_XPATH_SWAG_LABS_APP_ICON}
@@ -149,8 +153,6 @@ Drag And Drop Using Elements Without Show It On The Simulator Device
     Run Keyword If  ${initial_position['x']} == ${final_position['x']}  Log  The element has not moved in the X direction.
     Run Keyword If  ${initial_position['y']} == ${final_position['y']}  Log  The element has not moved in the Y direction. 
     
-    Swipe By Percent    10    50    90    50
-
 I Uninstall My App On My Iphone Device 
   Capture Page Screenshot  # Take a Screeshot to show in the log that my app is on my Iphone Screen 
   Remove Application    ${SWAG_APP_BUNDLE_ID}
@@ -163,3 +165,8 @@ I Can Verify That My App Is No Longer on My Iphone Device
 
 I Take A Screenshot To Show That My App Is Not On Iphone 
   Capture Page Screenshot
+  
+
+I Take A Screenshot To Show That My App Has Been Moved 
+  Capture Page Screenshot
+  Swipe By Percent    10    50    90    50

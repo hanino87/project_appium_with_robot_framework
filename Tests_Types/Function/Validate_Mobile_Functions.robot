@@ -54,7 +54,10 @@ Resource    ../../Keyword/Keywords_Home_Page.resource
 #   AND I Can Change My Iphone To Portrait Position
 
 Validate Drag And drop
-  Given Drag And Drop Using Elements Without Show It On The Simulator Device 
+  When I Am On A Page On My Iphone
+  Given I Start To Drag And Drop One App 
+  Then I Should Be Able to Drag And Drop Apps On Device
+  And I Take A Screenshot To Show That My App Has Been Moved
 
 Validate I Can Uninstall Swaglabs App On Iphone 
   When I Am On A Page On My Iphone
