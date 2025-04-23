@@ -1,7 +1,6 @@
 *** Settings ***
 Documentation     This is a test suite for the login page in SwagLabs app
 ...               on my iPhone 16 device 
-
 Library    AppiumLibrary
 Library    String
 Library    ../../LoadEnv.py
@@ -64,17 +63,25 @@ Login With No Username
 Login With No Password
   Set Env Vars For Username 1 In Swaglabs
   When I Am On SwagLabs Loginpage
-  GIVEN Im Try To Login On The App With Fifth Username "${BAD_USERNAME}" And No Password
+  GIVEN Im Try To Login On The App With Fifth Username "${SWAG_LABS_USERNAME_1}" And No Password
   Then I Should See Error Message That I Miss A Password
   And I Can Terminate The App And Dont See Products 
 
 Validate That Password Word Is Not Visible On LoginPage 
+  Set Env Vars For Password In Swaglabs
   When I Am On SwagLabs Loginpage
   Given I Try To Scrool on Loginpage
   Then I Should Not See Any Password Details 
+  AND I Terminate Swaglabs App
 
- 
-### TODO ### IMPLEMENT TEST THAT WHEN YOU TYPE IN YOUR PASSAWORD ITS MASKED ITS NOT VISBLE FOR THE USER
+Validate That Password Is Masked When Password Is Written 
+  Set Env Vars For Username 1 In Swaglabs
+  When I Am On SwagLabs Loginpage
+  Given Im Try To Login On The App With Username "${SWAG_LABS_USERNAME_1}"
+  Then I Can Verify That The Password Is Masked When I Write It 
+  And I Terminate Swaglabs App
+
+  
 
 
  

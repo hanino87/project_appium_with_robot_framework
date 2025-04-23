@@ -3,7 +3,6 @@
 Documentation  This is a resource file, that contains variables for Swaglabs apps homepage
 ...            on my iphone 
 
-
 *** Variables ***
 
 ${APP_BUNDLE_ID}     com.saucelabs.SwagLabsMobileApp
@@ -31,3 +30,5 @@ ${BAD_USERNAME}  Badusername
 ${Scroll_Loginpage}  assets/src/img/login-bot.png
 
 ${Text_About_Password}   And the password for all users is: secret_sauce
+
+${PASSWORD_TEXT_MASKED}   ••••••••••••

@@ -115,39 +115,39 @@ I Can Change My Iphone To Portrait Position
   ${Portait_Is_True_On_My_Iphone}=    Run Keyword And Return Status   Shake
   Run Keyword If    '${Portait_Is_True_On_My_Iphone}' == 'True'    Log    I have now changed my Iphone to Portrait position
 
-
-# THIS KEYWORD DIDN`T WORK ON THE EMALUATOR BUT THIS IS HOW KEYWORD SHOULD BE 
+# THIS KEYWORD DIDN`T WORK ON THE EMULATOR BUT THIS IS HOW KEYWORD SHOULD BE 
 I Can Change My Iphone To Landscape Position
   Landscape
   ${Landscape_Is_True_On_My_Iphone}=    Run Keyword And Return Status   Shake
   Run Keyword If    '${Landscape_Is_True_On_My_Iphone}' == 'True'    Log    I have now changed my Iphone to Landscape position
 
-### SPlit THIS SImulate that this is how you do drag and drop but i dont work on simulator 
+# THIS IS HOW YOU DO DRAG AND DROP ON THE IPHONE BUT IT DON´T WORK ON IPHONE
 
-# Drag And Drop Using Elements Without Show It On The Simulator Device 
-#     # Wait for the elements to be visible
-#     Wait Until Element Is Visible  ${ELEMENT_XPATH_SWAG_LABS_APP_ICON}
-#     Wait Until Element Is Visible  ${ELEMENT_XPATH_SAFARI_APP_ICON}
+Drag And Drop Using Elements Without Show It On The Simulator Device 
 
-#     # Capture the initial position of the SwagLabs App Icon (before the drag)
-#     ${initial_position}=  AppiumLibrary.Get Element Location  ${ELEMENT_XPATH_SWAG_LABS_APP_ICON}
-#     Log  Initial Position: ${initial_position}
+    # Wait for the elements to be visible
+    Wait Until Element Is Visible  ${ELEMENT_XPATH_SWAG_LABS_APP_ICON}
+    Wait Until Element Is Visible  ${ELEMENT_XPATH_SAFARI_APP_ICON}
 
-#    ${initial_position}=  AppiumLibrary.Get Element Location   ${ELEMENT_XPATH_FITNESS_APP_ICON}  
-#     Log  Initial Position: ${initial_position}
+    # Capture the initial position of the SwagLabs App Icon (before the drag)
+    ${initial_position}=  AppiumLibrary.Get Element Location  ${ELEMENT_XPATH_SWAG_LABS_APP_ICON}
+    Log  Initial Position: ${initial_position}
 
-#     # Perform scroll down to ensure the element is visible if it's off-screen
-#     Scroll Down  ${ELEMENT_XPATH_SWAG_LABS_APP_ICON}
+   ${initial_position}=  AppiumLibrary.Get Element Location   ${ELEMENT_XPATH_FITNESS_APP_ICON}  
+    Log  Initial Position: ${initial_position}
 
-#     # Perform drag and drop by element locator (from source to target)
-#     AppiumLibrary.Drag And Drop  ${ELEMENT_XPATH_SWAG_LABS_APP_ICON}   ${ELEMENT_XPATH_FITNESS_APP_ICON}      
+    # Perform scroll down to ensure the element is visible if it's off-screen
+    Scroll Down  ${ELEMENT_XPATH_SWAG_LABS_APP_ICON}
 
-#     # Capture the final position of the SwagLabs App Icon (after the drag)
-#     ${final_position}=  AppiumLibrary.Get Element Location  ${ELEMENT_XPATH_SWAG_LABS_APP_ICON}
-#     Log  Final Position: ${final_position}
+    # Perform drag and drop by element locator (from source to target)
+    AppiumLibrary.Drag And Drop  ${ELEMENT_XPATH_SWAG_LABS_APP_ICON}   ${ELEMENT_XPATH_FITNESS_APP_ICON}      
 
-#     # Optionally, compare the initial and final positions to ensure it was moved
-#     Run Keyword If  ${initial_position['x']} != ${final_position['x']}  Log  The element has moved in the X direction.
-#     Run Keyword If  ${initial_position['y']} != ${final_position['y']}  Log  The element has moved in the Y direction.
-#     Run Keyword If  ${initial_position['x']} == ${final_position['x']}  Log  The element has not moved in the X direction.
-#     Run Keyword If  ${initial_position['y']} == ${final_position['y']}  Log  The element has not moved in the Y direction.
+    # Capture the final position of the SwagLabs App Icon (after the drag)
+    ${final_position}=  AppiumLibrary.Get Element Location  ${ELEMENT_XPATH_SWAG_LABS_APP_ICON}
+    Log  Final Position: ${final_position}
+
+    # Optionally, compare the initial and final positions to ensure it was moved
+    Run Keyword If  ${initial_position['x']} != ${final_position['x']}  Log  The element has moved in the X direction.
+    Run Keyword If  ${initial_position['y']} != ${final_position['y']}  Log  The element has moved in the Y direction.
+    Run Keyword If  ${initial_position['x']} == ${final_position['x']}  Log  The element has not moved in the X direction.
+    Run Keyword If  ${initial_position['y']} == ${final_position['y']}  Log  The element has not moved in the Y direction.

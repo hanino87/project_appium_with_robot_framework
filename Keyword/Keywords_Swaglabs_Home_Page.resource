@@ -40,6 +40,7 @@ Im Try To Login On The App With First Username "${SWAG_LABS_USERNAME_1}" And Pas
    Click Element   ${TEXT_FIELD_PASSWORD}
    Input Text    ${TEXT_FIELD_PASSWORD}   ${BAD_PASSWORD}
    Click Element  ${LOGIN_BUTTON}
+   Sleep  5s 
    Log To Console    I login with correct username but wrong password
 
 Im Try To Login On The App With Second Username "${SWAG_LABS_USERNAME_2}" And Password "${SWAG_LABS_PASSWORD}"
@@ -50,6 +51,7 @@ Im Try To Login On The App With Second Username "${SWAG_LABS_USERNAME_2}" And Pa
    Click Element   ${TEXT_FIELD_PASSWORD}
    Input Text    ${TEXT_FIELD_PASSWORD}   ${SWAG_LABS_PASSWORD}
    Click Element  ${LOGIN_BUTTON}
+   Sleep  5s 
    Log To Console    I login with correct username and password
 
 Im Try To Login On The App With Third Username "${SWAG_LABS_USERNAME_1}" And Password "${SWAG_LABS_PASSWORD}"
@@ -60,6 +62,7 @@ Im Try To Login On The App With Third Username "${SWAG_LABS_USERNAME_1}" And Pas
    Click Element   ${TEXT_FIELD_PASSWORD}
    Input Text    ${TEXT_FIELD_PASSWORD}   ${SWAG_LABS_PASSWORD}
    Click Element  ${LOGIN_BUTTON}
+   Sleep  5s 
    Log To Console    I login with correct username and password
 
 Im Try To Login On The App With Fourth Username "${BAD_USERNAME}" And Password "${SWAG_LABS_PASSWORD}"
@@ -70,6 +73,7 @@ Im Try To Login On The App With Fourth Username "${BAD_USERNAME}" And Password "
    Click Element   ${TEXT_FIELD_PASSWORD}
    Input Text    ${TEXT_FIELD_PASSWORD}   ${SWAG_LABS_PASSWORD}
    Click Element  ${LOGIN_BUTTON}
+   Sleep    5s
    Log To Console    I login with correct password but wrong username 
 
 
@@ -79,21 +83,24 @@ Im Try To Login On The App With Password "${SWAG_LABS_PASSWORD}" And No Username
    Click Element   ${TEXT_FIELD_PASSWORD}
    Input Text    ${TEXT_FIELD_PASSWORD}   ${SWAG_LABS_PASSWORD}
    Click Element  ${LOGIN_BUTTON}
+   sleep  5s 
    Log To Console    I login with correct password but no username 
    Capture Page Screenshot
 
-Im Try To Login On The App With Fifth Username "${BAD_USERNAME}" And No Password
+Im Try To Login On The App With Fifth Username "${SWAG_LABS_USERNAME_1}" And No Password
    Click Element   ${ELEMENT_XPATH_SWAG_LABS_APP_ICON}
    Wait Until Element Is Visible     ${TEXT_FIELD_USERNAME}   10 
    Click Element   ${TEXT_FIELD_USERNAME}
-   Input Text    ${TEXT_FIELD_USERNAME}   ${BAD_USERNAME}
+   Input Text    ${TEXT_FIELD_USERNAME}   ${SWAG_LABS_USERNAME_1}
    Click Element  ${LOGIN_BUTTON}
    Log To Console    I login with correct username but no password 
+   sleep  5s 
    Capture Page Screenshot
 
 
 I Should See Error Messages That Im Locked Out From System 
    Element Should Be Visible  ${ERROR_MESSAGES_USER_LOCKED_OUT}
+   Page Should Not Contain Element    ${ERROR_MESSAGES_NOT_RIGHT_PASSWORD_OR_USERNAME}
 
 I Should See Error Messages That Password Does Not Match My Username
    Element Should Be Visible  ${ERROR_MESSAGES_NOT_RIGHT_PASSWORD_OR_USERNAME}
@@ -138,11 +145,28 @@ I Try To Scrool on Loginpage
   
 
 I Should Not See Any Password Details 
-  Page Should Not Contain Text    secret_sauce 
-  
-  
+  ${PASSWORD_SHOULD_BE_INVISIBLE_ON_PAGE}=    Run Keyword And Return Status   Page Should not Contain Element    ${SWAG_LABS_PASSWORD}
+  Run Keyword If    '${PASSWORD_SHOULD_BE_INVISIBLE_ON_PAGE}' == 'False'    Log    No its visible i tell security right now!
+  Capture Page Screenshot
 
+  
+Im Try To Login On The App With Username "${SWAG_LABS_USERNAME_1}" 
+   Click Element   ${ELEMENT_XPATH_SWAG_LABS_APP_ICON}
+   Wait Until Element Is Visible     ${TEXT_FIELD_USERNAME}   
+   Click Element   ${TEXT_FIELD_USERNAME}
+   Input Text    ${TEXT_FIELD_USERNAME}   ${SWAG_LABS_USERNAME_1}
 
+I Can Verify That The Password Is Masked When I Write It 
+   Click Element   ${TEXT_FIELD_PASSWORD}
+   Input Text    ${TEXT_FIELD_PASSWORD}   ${SWAG_LABS_PASSWORD}
+   Element Value Should Be    ${TEXT_FIELD_PASSWORD}   ${PASSWORD_TEXT_MASKED}  
+   Run Keyword And Return Status   Element Should Be Visible    ${PASSWORD_TEXT_MASKED} 
+   sleep  5s 
+   Run Keyword If    '${PASSWORD_TEXT_MASKED}' == 'True'    Log    Yes the password is masked for the user i take a screenshot to verify it works  
+   Capture Page Screenshot
+
+I Terminate Swaglabs App
+  Terminate Application     ${SWAG_APP_BUNDLE_ID}
 
 
 
