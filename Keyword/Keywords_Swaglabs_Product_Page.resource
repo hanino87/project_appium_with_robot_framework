@@ -30,10 +30,11 @@ I should be able to scroll up and down
 I should Click On Product Picture To Get More Information About It
   Wait Until Element Is Visible    ${PRODUCT_1_IMAGE}    
   Click Element    ${PRODUCT_1_IMAGE}  
+  Text Should Be Visible  ${PRODUCT_1_DESCRIPTION} 
   Element Should Contain Text    ${PRODUCT_1_DESCRIPTION}    sleek, streamlined Sly Pack that melds uncompromising style with unequaled laptop and tablet protection
   Element Should Not Contain Text    ${PRODUCT_1_DESCRIPTION}    this is a bad product don`t buy it 
   Scroll Down     ${SWAG_LABS_SCROOL_PRODUCT1_DETAIL} 
-  Sleep    2s
+  Sleep    5s
   Scroll Up     ${SWAG_LABS_SCROOL_PRODUCT1_DETAIL} 
   Wait Until Element Is Visible    ${PRODUCT_1_DESCRIPTION}  2s
   
@@ -88,9 +89,11 @@ I Can Click On The Links
 
 I Verify That Its Right Year On Copyright Text 
   Wait Until Element Is Visible    ${COPYRIGHT_TEXT}
+  Text Should Be Visible    ${COPYRIGHT_TEXT}
   Element Text Should Be    ${COPYRIGHT_TEXT}   © 2025 Sauce Labs. All Rights Reserved.
   Element Should Not Contain Text    ${COPYRIGHT_TEXT}    © 2024 
   Log   Its looks god right copyright year see screenschot for evidence 
   Capture Page Screenshot
 
 
+  

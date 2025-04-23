@@ -41,17 +41,27 @@ Resource    ../../Keyword/Keywords_Home_Page.resource
 
 ## BELOW IS TEST THAT DON`T WORK TO SHOW BEACUSE IS AN EMULATOR DEVICE BUT I GIVE YOU THE CODE TO SE HOW CODE SHOULD BE WRITTEN
 
-Validate Zoom Works On Iphone  
-  When I Am On A Page On My Iphone
-  GIVEN I Can Tap On Map Widget Icon On My Screen 
-  THEN I Can Handle All Popup Windows
-  AND I Can Zoom In City Umeå On The Mapp
+# Validate Zoom Works On Iphone  
+#   When I Am On A Page On My Iphone
+#   GIVEN I Can Tap On Map Widget Icon On My Screen 
+#   THEN I Can Handle All Popup Windows
+#   AND I Can Zoom In City Umeå On The Mapp
 
 # Validate Change Iphone To Different Positions 
 #   When I Am On A Page On My Iphone
 #   Given I Start To Shake My Iphone
 #   Then I Can Be Able To Shake My Iphone
 #   AND I Can Change My Iphone To Portrait Position
+
+Validate Drag And drop
+  Given Drag And Drop Using Elements Without Show It On The Simulator Device 
+
+Validate I Can Uninstall Swaglabs App On Iphone 
+  When I Am On A Page On My Iphone
+  Given I Uninstall My App On My Iphone Device 
+  Then I Can Verify That My App Is No Longer on My Iphone Device 
+  And I Take A Screenshot To Show That My App Is Not On Iphone
+
   
 
   

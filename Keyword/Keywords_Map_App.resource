@@ -29,6 +29,7 @@ I Can Handle All Popup Windows
   Sleep    10s
   Wait Until Element Is Visible    ${ALERT_WINDOW2} 
   Tap With Number Of Taps  ${ALERT_WINDOW2}  1  1 
+  Wait Until Page Does Not Contain Element    ${ALERT_WINDOW2}
   Sleep  10s 
   Run Keyword And Continue On Failure    Element should be visible   ${BUTTON_NOT_NOW_IN_POPUP_WINDOW}
   Run Keyword And Continue On Failure   Tap With Number Of Taps    ${BUTTON_NOT_NOW_IN_POPUP_WINDOW}  1   1

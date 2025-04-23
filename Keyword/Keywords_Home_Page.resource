@@ -62,7 +62,7 @@ I Should Be Able To Swipe Around Some Pages
   Swipe By Percent    90    50    10    50  ## SWIPE FROM RIGHT TO LEFT 
   Swipe By Percent    90    50    10    50  ## SWIPE FROM RIGHT TO LEFT 
 
-I Can Flip The Screen Up And Down Two Times
+I Can Flick The Screen Up And Down Two Times
   Flick	100	100	100	400	# Flicks the screen up.
   Flick	140	400	100	100	# Flicks the screen down.
   Flick	100	100	100	400	# Flicks the screen up.
@@ -133,14 +133,11 @@ Drag And Drop Using Elements Without Show It On The Simulator Device
     ${initial_position}=  AppiumLibrary.Get Element Location  ${ELEMENT_XPATH_SWAG_LABS_APP_ICON}
     Log  Initial Position: ${initial_position}
 
-   ${initial_position}=  AppiumLibrary.Get Element Location   ${ELEMENT_XPATH_FITNESS_APP_ICON}  
-    Log  Initial Position: ${initial_position}
-
     # Perform scroll down to ensure the element is visible if it's off-screen
     Scroll Down  ${ELEMENT_XPATH_SWAG_LABS_APP_ICON}
 
     # Perform drag and drop by element locator (from source to target)
-    AppiumLibrary.Drag And Drop  ${ELEMENT_XPATH_SWAG_LABS_APP_ICON}   ${ELEMENT_XPATH_FITNESS_APP_ICON}      
+    AppiumLibrary.Drag And Drop  ${ELEMENT_XPATH_SWAG_LABS_APP_ICON}   ${ELEMENT_XPATH_SAFARI_APP_ICON}     
 
     # Capture the final position of the SwagLabs App Icon (after the drag)
     ${final_position}=  AppiumLibrary.Get Element Location  ${ELEMENT_XPATH_SWAG_LABS_APP_ICON}
@@ -150,4 +147,19 @@ Drag And Drop Using Elements Without Show It On The Simulator Device
     Run Keyword If  ${initial_position['x']} != ${final_position['x']}  Log  The element has moved in the X direction.
     Run Keyword If  ${initial_position['y']} != ${final_position['y']}  Log  The element has moved in the Y direction.
     Run Keyword If  ${initial_position['x']} == ${final_position['x']}  Log  The element has not moved in the X direction.
-    Run Keyword If  ${initial_position['y']} == ${final_position['y']}  Log  The element has not moved in the Y direction.
+    Run Keyword If  ${initial_position['y']} == ${final_position['y']}  Log  The element has not moved in the Y direction. 
+    
+    Swipe By Percent    10    50    90    50
+
+I Uninstall My App On My Iphone Device 
+  Capture Page Screenshot  # Take a Screeshot to show in the log that my app is on my Iphone Screen 
+  Remove Application    ${SWAG_APP_BUNDLE_ID}
+  Sleep    10s
+  Run Keyword And Return Status    Remove Application    ${SWAG_APP_BUNDLE_ID}
+
+I Can Verify That My App Is No Longer on My Iphone Device 
+  Wait Until Page Does Not Contain Element    ${SWAG_APP_BUNDLE_ID}
+  Page Should Not Contain Element    ${SWAG_APP_BUNDLE_ID}
+
+I Take A Screenshot To Show That My App Is Not On Iphone 
+  Capture Page Screenshot
