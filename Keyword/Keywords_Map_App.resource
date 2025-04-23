@@ -26,15 +26,15 @@ Resource     ../Pages_Objects_Model/Map_App.resource
 #   Tap With Number Of Taps   ${BUTTON2_CONTINUE_IN_POPUP_WINDOW}  1  1 
 
 I Can Handle All Popup Windows
-  Sleep    30s
+  Sleep    10s
   Wait Until Element Is Visible    ${ALERT_WINDOW2} 
   Tap With Number Of Taps  ${ALERT_WINDOW2}  1  1 
-  Sleep  30s 
-  Wait Until Element Is Visible    ${BUTTON_NOT_NOW_IN_POPUP_WINDOW}
-  Tap With Number Of Taps    ${BUTTON_NOT_NOW_IN_POPUP_WINDOW}  1   1
-  Sleep  30s 
-  Wait Until Page Contains Element    ${BUTTON2_CONTINUE_IN_POPUP_WINDOW}
-  Click Element    ${BUTTON2_CONTINUE_IN_POPUP_WINDOW}
+  Sleep  10s 
+  Run Keyword And Continue On Failure    Element should be visible   ${BUTTON_NOT_NOW_IN_POPUP_WINDOW}
+  Run Keyword And Continue On Failure   Tap With Number Of Taps    ${BUTTON_NOT_NOW_IN_POPUP_WINDOW}  1   1
+  Sleep  10s 
+  Run Keyword And Continue On Failure   Page Should Contain Element   ${BUTTON2_CONTINUE_IN_POPUP_WINDOW}
+  Run Keyword And Continue On Failure   Tap With Number Of Taps   ${BUTTON2_CONTINUE_IN_POPUP_WINDOW}  1   1 
  
 
  
@@ -43,8 +43,7 @@ I Can Zoom In City Umeå On The Mapp   ## THIS IS HOW IT SHOULD WORK BUT CANT SH
   Wait Until Element Is Visible    ${UMEÅ_ICON}
   Tap With Number Of Taps    ${UMEÅ_ICON}   1   1
   Tap With Number Of Taps     ${UMEÅ_ICON}  1  1
-  Tap With Number Of Taps    ${UMEÅ_ICON}   1   1
-  Tap With Number Of Taps     ${UMEÅ_ICON}  1  1
-  log  Now i have simulated to zoom on my map app 
+  log  Now i have simulated to zoom on my map app see screenshoot to verify that i got Umeå information 
+  Capture Page Screenshot
   Terminate Application    ${MAP_BUNDLE_ID}  
 
