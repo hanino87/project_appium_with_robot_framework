@@ -17,5 +17,5 @@ Validate I Can Start And Stop Screen Recording
   When I Start The Iphone   ${URL}    platform_name=${PLATFORM_NAME}    automation_name=${AUTOMATION_NAME}    platform_version=${PLATFORM_VERSION}    device_name=${DEVICE_NAME}    new_command_timeout=0    connect_hardware_keyboard=${True}    udid=${UDID}  
   Given I Am On A Page On My Iphone 
   Then Start Video of My Test on The Screen 
-  AND Stop Recording Of My Test On The Screen
+  AND Stop Recording Of My Test On The Screen 
   

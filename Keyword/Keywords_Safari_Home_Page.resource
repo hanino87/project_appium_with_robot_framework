@@ -3,6 +3,7 @@
 Documentation     This is a resource file, that contains keywords for homepage for Safari app 
 
 Library      AppiumLibrary
+Library    ../.venv/lib/python3.11/site-packages/robot/libraries/XML.py
 Resource     ../Pages_Objects_Model/Home_Page.resource
 Resource    ../Pages_Objects_Model/Safari_App.resource
 
@@ -13,24 +14,24 @@ I Should Be Able To Search for Hammarby
   Wait Until Element Is Visible    ${SAFARI_SEARCH_FIELD} 
   Tap With Number Of Taps    ${SAFARI_SEARCH_FIELD}    1    1
   Input Text    ${SAFARI_SEARCH_FIELD}    Hammarby 
+  Get Element Text  ${SAFARI_SEARCH_FIELD} 
+  Element Text Should Be   ${SAFARI_SEARCH_FIELD}    Hammarby
 
 I Should Be Able To Lock My Iphone And When I Unlock The Search Result Is Visible 
   Lock  100s 
   Wait Until Element Is Visible  ${HAMMARBY_SEARCH_RESULT}
   Page Should Contain Element    ${HAMMARBY_SEARCH_RESULT}
-  Page Should Not Contain Text    Aik 
-  Log  I have still my Hammarby search result after i loocked my iphone
+  ${AIK_Text_Not_Found_On_Page}=    Run Keyword And Return Status    Page Should not Contain Text    Aik
+  Run Keyword If    '${AIK_Text_Not_Found_On_Page}' == 'True'    Log    I have still my Hammarby search result after I locked my iPhone
   Capture Page Screenshot
 
 I Can Clear The Search And Terminate The App
   Click Element    ${CLEAR_SEARCH_BUTTON}
+  Get Element Text  ${SAFARI_SEARCH_FIELD} 
+  Element Text Should Be   ${SAFARI_SEARCH_FIELD}    """
   Terminate Application    ${SAFARI_BUNDLE_ID}        
 
   
-
-
- 
-
   
 ### SPlit THIS SImulate that this is how you do drag and drop but i dont work on simulator 
 

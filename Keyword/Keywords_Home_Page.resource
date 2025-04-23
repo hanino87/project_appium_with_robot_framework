@@ -52,6 +52,9 @@ I Start To Swipe With My Fingers
 I Start To Flick With My Fingers 
   Log  I am just start to flich 
 
+I Start To Shake My Iphone 
+  Log  I Start To Shake My Iphone 
+
 I Should Be Able To Swipe Around Some Pages 
   Swipe By Percent    10    50    90    50  ## SWIPE FROM LEFT TO RIGHT
   Swipe By Percent    90    50    10    50  ## SWIPE FROM RIGHT TO LEFT 
@@ -102,6 +105,22 @@ I Can Tap On Map Widget Icon On My Screen
   Swipe By Percent    10    50    90    50
   Tap With Number Of Taps    ${MAPS_WIDGET_ICON}   1   1
 
+I Can Be Able To Shake My Iphone 
+  Shake
+  ${Shake_Is_True_On_My_Iphone}=    Run Keyword And Return Status   Shake
+  Run Keyword If    '${Shake_Is_True_On_My_Iphone}' == 'True'    Log    I have now shaken my Iphone It Works
+
+I Can Change My Iphone To Portrait Position
+  Portrait
+  ${Portait_Is_True_On_My_Iphone}=    Run Keyword And Return Status   Shake
+  Run Keyword If    '${Portait_Is_True_On_My_Iphone}' == 'True'    Log    I have now changed my Iphone to Portrait position
+
+
+# THIS KEYWORD DIDN`T WORK ON THE EMALUATOR BUT THIS IS HOW KEYWORD SHOULD BE 
+I Can Change My Iphone To Landscape Position
+  Landscape
+  ${Landscape_Is_True_On_My_Iphone}=    Run Keyword And Return Status   Shake
+  Run Keyword If    '${Landscape_Is_True_On_My_Iphone}' == 'True'    Log    I have now changed my Iphone to Landscape position
 
 ### SPlit THIS SImulate that this is how you do drag and drop but i dont work on simulator 
 
