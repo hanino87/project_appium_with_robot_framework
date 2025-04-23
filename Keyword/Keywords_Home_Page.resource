@@ -96,8 +96,8 @@ I Open Upp Safari With Flick App Can Do Search
 Start Video of My Test on The Screen 
   Sleep  20s  ## Good To Have so you can start the recording from where you want 
   Log To Console   Now we start the recording start test  ## Good to have a message to view in console then you know when to start testing 
-  Start Screen Recording   60s 
-  Sleep  60s
+  Start Screen Recording   30s 
+  Sleep  30s
   Log To Console  Okay now time is out stop testing 
 
 Stop Recording Of My Test On The Screen
