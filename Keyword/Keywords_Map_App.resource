@@ -10,16 +10,33 @@ Resource     ../Pages_Objects_Model/Map_App.resource
 
 *** Keywords ***
 
+# I Can Handle All Popup Windows
+#   Sleep  30s 
+#   Wait Until Element Is Visible    ${ALERT_WINDOW2} 
+#   Tap With Number Of Taps  ${ALERT_WINDOW2}  1  1 
+#   Sleep  30s 
+#   Skip If  ${BUTTON_NOT_NOW_IN_POPUP_WINDOW}  is not visible
+#   Wait Until Element Is Visible    ${BUTTON_NOT_NOW_IN_POPUP_WINDOW}
+#   Skip If  ${BUTTON_NOT_NOW_IN_POPUP_WINDOW}  is not visible
+#   Tap With Number Of Taps    ${BUTTON_NOT_NOW_IN_POPUP_WINDOW}  1   1
+#   Sleep  30s 
+#   Skip If  ${BUTTON2_CONTINUE_IN_POPUP_WINDOW}  is not visible
+#   Wait Until Page Contains Element    ${BUTTON2_CONTINUE_IN_POPUP_WINDOW}
+#   Skip If  ${BUTTON2_CONTINUE_IN_POPUP_WINDOW}  is not visible
+#   Tap With Number Of Taps   ${BUTTON2_CONTINUE_IN_POPUP_WINDOW}  1  1 
+
 I Can Handle All Popup Windows
-  Sleep  30s 
+  Sleep    30s
   Wait Until Element Is Visible    ${ALERT_WINDOW2} 
   Tap With Number Of Taps  ${ALERT_WINDOW2}  1  1 
   Sleep  30s 
-  Wait Until Element Is Visible    ${BUTTON_NOT_NOW_IN_POPU_WINDOW}
-  Tap With Number Of Taps    ${BUTTON_NOT_NOW_IN_POPU_WINDOW}  1   1
+  Wait Until Element Is Visible    ${BUTTON_NOT_NOW_IN_POPUP_WINDOW}
+  Tap With Number Of Taps    ${BUTTON_NOT_NOW_IN_POPUP_WINDOW}  1   1
   Sleep  30s 
   Wait Until Page Contains Element    ${BUTTON2_CONTINUE_IN_POPUP_WINDOW}
   Click Element    ${BUTTON2_CONTINUE_IN_POPUP_WINDOW}
+ 
+
  
   
 I Can Zoom In City Umeå On The Mapp   ## THIS IS HOW IT SHOULD WORK BUT CANT SHOW WHEN RUN ROBOT FILE BEACUE ITS A SIMULATOR DEVICE 
