@@ -31,7 +31,7 @@ Validate Flick On Iphone
   When I Am On A Page On My Iphone
   Given I Start To Flick With My Fingers 
   Then I Can Flick The Screen Horizontal Back And Forward
-  AND I Can Flip The Screen Up And Down Two Times
+  AND I Can Flick The Screen Up And Down Two Times
   
 Validate Flick Search And Lock My Phone 
   When I Open Upp Safari With Flick App Can Do Search

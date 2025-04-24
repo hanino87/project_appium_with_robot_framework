@@ -65,18 +65,55 @@ Prerequisites:
 
 The plan is to create and write the testcase according to Robot Frameworks BBD(Behavior Driven Development). 
 
-The purpose is to write testcase so it`s clear that they releates directly relates to user acceptance criteria. 
+• 🧪 BDD (Behavior-Driven Development)
 
-The Given-When-Then syntax is a commonly used structure for writing user stories and acceptance criteria in behavior-driven development (BDD). It is used to describe the desired behavior of a system in a clear, concise, and consistent manner.
+    It is based on the Given-When-Then syntax, a structured format used to write clear user stories and acceptance criteria—crucial for effective testing.
 
-For mer info follow link below: 
+    The structre is broken down in three parts: 
+  
+    • Given: Describes where your test starts 
 
-🔗 https://docs.robotframework.org/docs/testcase_styles/bdd
+    • When:  Specifies the action in your test
+
+    • Then: Defines the expected outcome of the test
+
+    And the extra step in BBD:
+    
+    • And: An extra step to validate the test further 
+
+• ✅ Test Case Example:
+   
+   *** Test Cases ***
+   
+   Validate Swipe On Iphone  (Test Case Name)
+
+   When I Am On A Page On My Iphone
+   Given I Start To Swipe With My Fingers 
+   Then I Should Be Able To Swipe Around Some Pages  
+
+   Click On A Prouct To View More Detail About It (Test Case Name)
+   
+   When I Am In Product View Page
+   Given I should be able to scroll up and down 
+   Then I should Click On Product Picture To Get More Information About It
+   AND I Can Go Back To See The Other Products
+  
+• For mer info follow link:
+
+  🔗 https://docs.robotframework.org/docs/testcase_styles/bdd
 
 
-### Test Scoope §
+### Test Scoope 
 
-Native apps in iOS Iphone 16 simulator devices 
+  •  iOS Iphone 16 simulator device 
+
+  •  Native apps 
+
+  •  Swaglabs test application 
+
+    Demo of the application on web: 🔗 https://www.saucedemo.com/v1/
+
+### Setup Device 
 
 
 
