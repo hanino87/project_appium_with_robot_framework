@@ -6,51 +6,60 @@
 Prerequisites:
 
 • 🐍 Python 3.7+
-  Install from 🔗 https://www.python.org
-  (Required for Robot Framework and AppiumLibrary)
+  
+    Required for Robot Framework and AppiumLibrary
+
+    Install from 🔗 https://www.python.org
+    (Required for Robot Framework and AppiumLibrary)
 
 • 🤖 Robot Framework 
-  Install via pip:
+  
+    Install via pip:
 
-  pip install robotframework
+    pip install robotframework
 
-  ➡️ Robot Framework Documentation: 🔗 https://robotframework.org
+    ➡️ Robot Framework Documentation: 🔗 https://robotframework.org
   
 • 🚀 Appium server installed and running 
-  Required to automate mobile apps from a server. 
+    
+    Required to automate mobile apps from a server. 
 
-  Install using Node.js:
+    Install using Node.js:
 
-  npm install -g appium
+    npm install -g appium
 
-  ➡️ Setup guide: 🔗 https://appium.io/docs/en/2.1/quickstart/install/
+    ➡️ Setup guide: 🔗 https://appium.io/docs/en/2.1/quickstart/install/
 
 • 🧰 Xcode
-  Includes tools and simulators required for be able to doing iOS testing.
+    
+    Includes tools and simulators required for be able to doing iOS testing.
   
-  Install from: the Mac App Store.
+    Install from: the Mac App Store.
 
 • 🧪 Appium XCUITest Driver
-   Tool that communicates with iOS apps using Apple’s XCUITest framework.
+    
+    Tool that communicates with iOS apps using Apple’s XCUITest framework.
 
-   ➡️ Setup guide: 🔗 https://www.npmjs.com/package/appium-xcuitest-driver
+    ➡️ Setup guide: 🔗 https://www.npmjs.com/package/appium-xcuitest-driver
 
 • 👁 Appium Inspector 
-  GUI tool to explore app UI and locate elements 
-  so you can start to write your test scripting.
+    
+    GUI tool to explore app UI and locate elements 
+    so you can start to write your test scripting.
   
-  Download from: 🔗 https://github.com/appium/appium-inspector
+    Download from: 🔗 https://github.com/appium/appium-inspector
 
 • 🧩 WebDriverAgent 
-  WebDriverAgent is the bridge between Appium and iOS devices. It allowing you to:
   
-  • Install and close applications 
+    WebDriverAgent is the bridge between Appium and iOS devices. It allowing you to:
+  
+      • Install and close applications 
 
-  • Tap,Scrool,Flick and other mobile functions 
+      • Tap,Scrool,Flick and other mobile functions 
 
-  • Verify that your element is visible screen
+      • Verify that your element is visible screen
 
-  ➡️ Setup guide: 🔗 https://www.npmjs.com/package/appium-webdriveragent
+    ➡️ Setup guide: 🔗 https://www.npmjs.com/package/appium-webdriveragent
 
 ### BBD Driven Testcases 
 
