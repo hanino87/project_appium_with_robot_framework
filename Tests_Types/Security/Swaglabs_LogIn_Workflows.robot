@@ -36,12 +36,12 @@ Login With Lockedout Customer
     Given Im Try To Login On The App With Second Username "${SWAG_LABS_USERNAME_2}" And password "${SWAG_LABS_PASSWORD}"
     Then I Should See Error Messages That Im Locked Out From System
     AND I Will not See Lists Of Products
-
+ 
 Login With Normal User 
   Set Env Vars For Password In Swaglabs
   Set Env Vars For Username 1 In Swaglabs
   When I Am On SwagLabs Loginpage
-  GIVEN Im Try To Login On The App With Third Username "${SWAG_LABS_USERNAME_1}" And password "${SWAG_LABS_PASSWORD}"
+  GIVEN Im Try To Login On The App With Third Username " ${SWAG_LABS_USERNAME_1}" And password "${SWAG_LABS_PASSWORD}"
   Then I Should See List Of Available Products
   And I Can Terminate The App And Dont See Products 
 

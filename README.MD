@@ -83,24 +83,24 @@ The plan is to create and write the testcase according to Robot Frameworks BBD(B
 
 • ✅ Test Case Example:
    
-   *** Test Cases ***
+    *** Test Cases ***
    
-   Validate Swipe On Iphone  (Test Case Name)
+    Validate Swipe On Iphone  (Test Case Name)
 
-   When I Am On A Page On My Iphone
-   Given I Start To Swipe With My Fingers 
-   Then I Should Be Able To Swipe Around Some Pages  
+    When I Am On A Page On My Iphone
+    Given I Start To Swipe With My Fingers 
+    Then I Should Be Able To Swipe Around Some Pages  
 
-   Click On A Prouct To View More Detail About It (Test Case Name)
+    Click On A Prouct To View More Detail About It (Test Case Name)
    
-   When I Am In Product View Page
-   Given I should be able to scroll up and down 
-   Then I should Click On Product Picture To Get More Information About It
-   AND I Can Go Back To See The Other Products
+    When I Am In Product View Page
+    Given I should be able to scroll up and down 
+    Then I should Click On Product Picture To Get More Information About It
+    AND I Can Go Back To See The Other Products
   
-• For mer info follow link:
+    For mer info follow link:
 
-  🔗 https://docs.robotframework.org/docs/testcase_styles/bdd
+    🔗 https://docs.robotframework.org/docs/testcase_styles/bdd
 
 
 ### Test Scoope 

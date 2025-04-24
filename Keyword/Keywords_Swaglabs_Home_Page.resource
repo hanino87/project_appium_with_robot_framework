@@ -91,7 +91,7 @@ Im Try To Login On The App With Fifth Username "${SWAG_LABS_USERNAME_1}" And No 
    Click Element   ${ELEMENT_XPATH_SWAG_LABS_APP_ICON}
    Wait Until Element Is Visible     ${TEXT_FIELD_USERNAME}   10 
    Click Element   ${TEXT_FIELD_USERNAME}
-   Input Text    ${TEXT_FIELD_USERNAME}   ${SWAG_LABS_USERNAME_1}
+   Input Text    ${TEXT_FIELD_USERNAME}   ${SWAG_LABS_PASSWORD}
    Click Element  ${LOGIN_BUTTON}
    Log To Console    I login with correct username but no password 
    sleep  5s 
@@ -158,7 +158,7 @@ Im Try To Login On The App With Username "${SWAG_LABS_USERNAME_1}"
 
 I Can Verify That The Password Is Masked When I Write It 
    Click Element   ${TEXT_FIELD_PASSWORD}
-   Input Text    ${TEXT_FIELD_PASSWORD}   ${SWAG_LABS_PASSWORD}
+   Input Text    ${TEXT_FIELD_PASSWORD}     ${SWAG_LABS_PASSWORD}
    Element Value Should Be    ${TEXT_FIELD_PASSWORD}   ${PASSWORD_TEXT_MASKED}  
    Run Keyword And Return Status   Element Should Be Visible    ${PASSWORD_TEXT_MASKED} 
    sleep  5s 
