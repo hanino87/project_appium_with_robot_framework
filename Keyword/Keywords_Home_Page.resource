@@ -120,13 +120,13 @@ I Can Change My iPhone To Portrait Position
   ${Portait_Is_True_On_My_Iphone}=    Run Keyword And Return Status   Shake
   Run Keyword If    '${Portait_Is_True_On_My_Iphone}' == 'True'    Log    I have now changed my Iphone to Portrait position
 
-# THIS KEYWORD DIDN`T WORK ON THE EMULATOR BUT THIS IS HOW KEYWORD SHOULD BE 
+# THIS KEYWORD DIDN`T WORK ON THE SIMULATOR FOR iOS BUT THIS IS HOW KEYWORD SHOULD BE 
 I Can Change My iPhone To Landscape Position
   Landscape
   ${Landscape_Is_True_On_My_Iphone}=    Run Keyword And Return Status   Shake
   Run Keyword If    '${Landscape_Is_True_On_My_Iphone}' == 'True'    Log    I have now changed my Iphone to Landscape position
 
-# THIS IS HOW YOU DO DRAG AND DROP ON THE IPHONE BUT IT DON´T WORK ON IPHONE EMULATOR
+# THIS IS HOW YOU DO DRAG AND DROP ON THE IPHONE BUT IT DON´T WORK ON MY iOS SIMULATOR
 
 I Should Be Able to Drag And Drop Apps On Device 
 

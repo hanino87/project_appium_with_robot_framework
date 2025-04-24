@@ -46,7 +46,7 @@ Validate I Can Uninstall Swaglabs App On iPhone
   Then I Can Verify That My App Is No Longer on My Iphone Device 
   And I Take A Screenshot To Show That My App Is Not On Iphone
 
-# BELOW IS TEST THAT DON`T WORK TO SHOW ON MY EMULATOR DEVICE BUT I GIVE YOU THE CODE TO SE HOW IT SHOULD BE WRITTEN
+# BELOW IS TEST THAT DON`T WORK TO SHOW ON MY SIMULATOR DEVICE BUT I GIVE YOU THE CODE TO SE HOW IT SHOULD BE WRITTEN
 
 Validate Zoom On Iphone  
   When I Am On A Page On My iPhone
