@@ -1,7 +1,56 @@
 
-### Hello and Welcome to my Testproject with Robot Framework with Appium for Native and Web Mobile App Testing
+### Welcome to my thesis project Robot Framework and Appium for mobile testing 
 
+### Installation 
 
+Prerequisites:
+
+• 🐍 Python 3.7+
+  Install from 🔗 https://www.python.org
+  (Required for Robot Framework and AppiumLibrary)
+
+• 🤖 Robot Framework 
+  Install via pip:
+
+  pip install robotframework
+
+  ➡️ Robot Framework Documentation: 🔗 https://robotframework.org
+  
+• 🚀 Appium server installed and running 
+  Required to automate mobile apps from a server. 
+
+  Install using Node.js:
+
+  npm install -g appium
+
+  ➡️ Setup guide: 🔗 https://appium.io/docs/en/2.1/quickstart/install/
+
+• 🧰 Xcode
+  Includes tools and simulators required for be able to doing iOS testing.
+  
+  Install from: the Mac App Store.
+
+• 🧪 Appium XCUITest Driver
+   Tool that communicates with iOS apps using Apple’s XCUITest framework.
+
+   ➡️ Setup guide: 🔗 https://www.npmjs.com/package/appium-xcuitest-driver
+
+• 👁 Appium Inspector 
+  GUI tool to explore app UI and locate elements 
+  so you can start to write your test scripting.
+  
+  Download from: 🔗 https://github.com/appium/appium-inspector
+
+• 🧩 WebDriverAgent 
+  WebDriverAgent is the bridge between Appium and iOS devices. It allowing you to:
+  
+  • Install and close applications 
+
+  • Tap,Scrool,Flick and other mobile functions 
+
+  • Verify that your element is visible screen
+
+  ➡️ Setup guide: 🔗 https://www.npmjs.com/package/appium-webdriveragent
 
 ### BBD Driven Testcases 
 
@@ -11,14 +60,16 @@ The purpose is to write testcase so it`s clear that they releates directly relat
 
 The Given-When-Then syntax is a commonly used structure for writing user stories and acceptance criteria in behavior-driven development (BDD). It is used to describe the desired behavior of a system in a clear, concise, and consistent manner.
 
-For mer info click on this link below: 
+For mer info follow link below: 
 
-https://docs.robotframework.org/docs/testcase_styles/bdd
+🔗 https://docs.robotframework.org/docs/testcase_styles/bdd
 
 
-### Test Scoope 
+### Test Scoope §
 
-Native apps in iOS Iphone 16 Pro simulator devices 
+Native apps in iOS Iphone 16 simulator devices 
+
+
 
 
 
