@@ -1,14 +1,9 @@
 *** Settings ***
 Documentation     This is a resource file, that contains variables for Safari app
-...               on my iphone 
+...               on my Iphone 
 ...  
 
 Library   AppiumLibrary
-
-*** Comments ***
-
-This is Variaables for safari homepage app  
-
 
 *** Variables ***
 

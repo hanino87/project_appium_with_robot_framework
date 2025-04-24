@@ -4,20 +4,21 @@ Documentation     This is a resource file, that contains keywords for homepage f
 
 Library      AppiumLibrary
 Library    ../.venv/lib/python3.11/site-packages/robot/libraries/XML.py
+
 Resource     ../Pages_Objects_Model/Home_Page.resource
 Resource    ../Pages_Objects_Model/Safari_App.resource
 
 
 *** Keywords ***
 
-I Should Be Able To Search for Hammarby 
+I Should Be Able To Search For Word Hammarby 
   Wait Until Element Is Visible    ${SAFARI_SEARCH_FIELD} 
   Tap With Number Of Taps    ${SAFARI_SEARCH_FIELD}    1    1
   Input Text    ${SAFARI_SEARCH_FIELD}    Hammarby 
   Get Element Text  ${SAFARI_SEARCH_FIELD} 
   Element Text Should Be   ${SAFARI_SEARCH_FIELD}    Hammarby
 
-I Should Be Able To Lock My Iphone And When I Unlock The Search Result Is Visible 
+I Should Be Able To Lock My iPhone And When I Unlock The Search Result Is Visible 
   Lock  100s 
   Wait Until Element Is Visible  ${HAMMARBY_SEARCH_RESULT}
   Page Should Contain Element    ${HAMMARBY_SEARCH_RESULT}
@@ -33,32 +34,3 @@ I Can Clear The Search And Terminate The App
 
   
   
-### SPlit THIS SImulate that this is how you do drag and drop but i dont work on simulator 
-
-# Drag And Drop Using Elements Without Show It On The Simulator Device 
-#     # Wait for the elements to be visible
-#     Wait Until Element Is Visible  ${ELEMENT_XPATH_SWAG_LABS_APP_ICON}
-#     Wait Until Element Is Visible  ${ELEMENT_XPATH_SAFARI_APP_ICON}
-
-#     # Capture the initial position of the SwagLabs App Icon (before the drag)
-#     ${initial_position}=  AppiumLibrary.Get Element Location  ${ELEMENT_XPATH_SWAG_LABS_APP_ICON}
-#     Log  Initial Position: ${initial_position}
-
-#    ${initial_position}=  AppiumLibrary.Get Element Location   ${ELEMENT_XPATH_FITNESS_APP_ICON}  
-#     Log  Initial Position: ${initial_position}
-
-#     # Perform scroll down to ensure the element is visible if it's off-screen
-#     Scroll Down  ${ELEMENT_XPATH_SWAG_LABS_APP_ICON}
-
-#     # Perform drag and drop by element locator (from source to target)
-#     AppiumLibrary.Drag And Drop  ${ELEMENT_XPATH_SWAG_LABS_APP_ICON}   ${ELEMENT_XPATH_FITNESS_APP_ICON}      
-
-#     # Capture the final position of the SwagLabs App Icon (after the drag)
-#     ${final_position}=  AppiumLibrary.Get Element Location  ${ELEMENT_XPATH_SWAG_LABS_APP_ICON}
-#     Log  Final Position: ${final_position}
-
-#     # Optionally, compare the initial and final positions to ensure it was moved
-#     Run Keyword If  ${initial_position['x']} != ${final_position['x']}  Log  The element has moved in the X direction.
-#     Run Keyword If  ${initial_position['y']} != ${final_position['y']}  Log  The element has moved in the Y direction.
-#     Run Keyword If  ${initial_position['x']} == ${final_position['x']}  Log  The element has not moved in the X direction.
-#     Run Keyword If  ${initial_position['y']} == ${final_position['y']}  Log  The element has not moved in the Y direction.

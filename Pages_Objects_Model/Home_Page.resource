@@ -1,8 +1,7 @@
 *** Settings ***
 Documentation     This is a resource file, that can contain variables for homepage
-...               on my iphone for startupp settings and some mobile functions on my Iphone 
-...    
-Library    OperatingSystem  # LIBRARY TO EXECUTE SYSTEM COMMANDS
+...               on my Iphone device 
+
 
 
 *** Variables ***

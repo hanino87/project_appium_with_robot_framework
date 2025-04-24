@@ -85,9 +85,9 @@ The plan is to create and write the testcase according to Robot Frameworks BBD(B
    
     *** Test Cases ***
    
-    Validate Swipe On Iphone  (Test Case Name)
+    Validate Swipe On iPhone  (Test Case Name)
 
-    When I Am On A Page On My Iphone
+    When I Am On A Page On My iPhone
     Given I Start To Swipe With My Fingers 
     Then I Should Be Able To Swipe Around Some Pages  
 
@@ -105,7 +105,7 @@ The plan is to create and write the testcase according to Robot Frameworks BBD(B
 
 ### Test Scoope 
 
-  •  iOS Iphone 16 simulator device 
+  •  iOS iPhone 16 simulator device 
 
   •  Native apps 
 

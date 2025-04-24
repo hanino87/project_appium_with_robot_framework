@@ -1,9 +1,10 @@
 
 *** Settings ***
-Documentation     This is a resource file, that can contains keywords For Picture App
+Documentation     This is a resource file, that contains keywords For Picture App
 ...               
 
 Library      AppiumLibrary
+
 Resource     ../Pages_Objects_Model/Home_Page.resource
 Resource     ../Pages_Objects_Model/Picture_App.resource
 Resource     ../Pages_Objects_Model/Map_App.resource

@@ -5,15 +5,16 @@ Documentation    This is a testsuite to start the Iphone and install and start m
 
 Library  AppiumLibrary
 Library  String
+
 Resource  ../../Pages_Objects_Model/Home_Page.resource
 Resource  ../../Pages_Objects_Model/Picture_App.resource
 Resource  ../../Keyword/Keywords_Home_Page.resource
 Resource  ../../Keyword/Keywords_Picture_App.resource
 
 *** Test Cases ***
-Validate My Iphone Starts
-   Given I Press Start Button on my Iphone
-   When I Start The Iphone   ${URL}    platform_name=${PLATFORM_NAME}    automation_name=${AUTOMATION_NAME}    platform_version=${PLATFORM_VERSION}    device_name=${DEVICE_NAME}    new_command_timeout=0    connect_hardware_keyboard=${True}    udid=${UDID}  
+Validate My iPhone Starts
+   Given I Press Start Button On My iPhone
+   When I Start The iPhone   ${URL}    platform_name=${PLATFORM_NAME}    automation_name=${AUTOMATION_NAME}    platform_version=${PLATFORM_VERSION}    device_name=${DEVICE_NAME}    new_command_timeout=0    connect_hardware_keyboard=${True}    udid=${UDID}  
    Then I Should See My Home App Icons If I Go To Start Page
    AND The Safari App On My Home App Icons Should Be Enabled
 

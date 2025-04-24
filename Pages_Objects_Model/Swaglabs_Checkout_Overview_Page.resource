@@ -1,7 +1,7 @@
 *** Settings ***
 
-Documentation  This is a resource file, that contains variables and  for Swaglabs app
-...            on my iphone for the checkout overview page 
+Documentation  This is a resource file, that contains variables for Swaglabs app
+...            on my iPhone for the checkout overview page 
 
 *** Variables ***
 

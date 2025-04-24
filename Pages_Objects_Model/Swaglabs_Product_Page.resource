@@ -1,7 +1,7 @@
 *** Settings ***
 
-Documentation  This is a resource file, that contains variables and  for Swaglabs app
-...            on my iphone for their productlist page 
+Documentation  This is a resource file, that contains variables for Swaglabs app
+...            on my iPhone for their productlist page 
 
 *** Variables ***
 
@@ -17,11 +17,11 @@ ${SWAG_LABS_CART_ICON_WITH_TWO_PRODUCTS}      name=2
 
 ${SWAG_LABS_CART_ICON_WITH_THREE_PRODUCTS}      name=3 
 
-${ADD_TO_CART_BUTTON1}   //XCUIElementTypeOther[@name="test-ADD TO CART"][1]  # 
+${ADD_TO_CART_BUTTON1}   //XCUIElementTypeOther[@name="test-ADD TO CART"][1]  # THIS IS THE FIRST PRODUCT ON THE VIEW LIST OF PRODUCTS 
 
 ${ADD_TO_CART_BUTTON2}   test-ADD TO CART  
 
-${REMOVE_FROM_CART_BUTTON2}   (//XCUIElementTypeOther[@name="test-REMOVE"])[1]  # 
+${REMOVE_FROM_CART_BUTTON2}   (//XCUIElementTypeOther[@name="test-REMOVE"])[1]  
 
 ${PRODUCT1_IMAGE}       assets/src/img/sauce-backpack.jpg
 

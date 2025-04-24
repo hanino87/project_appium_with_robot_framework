@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation     This is a resource file, that can contain variables for Map App
+Documentation     This is a resource file, that can contain variables for Map app
 ...    
 
 *** Variables ***

@@ -1,7 +1,7 @@
 *** Settings ***
 
 Documentation  This is a resource file, that contains variables for Swaglabs apps homepage
-...            on my iphone 
+...            on my iPhone 
 
 *** Variables ***
 
@@ -27,8 +27,8 @@ ${BAD_PASSWORD}  Badpassword
 
 ${BAD_USERNAME}  Badusername
        
-${Scroll_Loginpage}  assets/src/img/login-bot.png
+${SCROOL_LOGIN_PAGE}  assets/src/img/login-bot.png
 
-${Text_About_Password}   And the password for all users is: secret_sauce
+${TEXT_ABOUT_PASSWORD}   And the password for all users is: secret_sauce
 
 ${PASSWORD_TEXT_MASKED}   ••••••••••••

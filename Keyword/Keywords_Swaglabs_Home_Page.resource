@@ -1,7 +1,11 @@
 *** Settings ***
+
+Documentation     This is a resource file, that contains keywords for homepage for Swaglabs app 
+
 Library    AppiumLibrary
 Library    String
 Library    ../LoadEnv.py  # Ensure this path is correct
+
 Resource   ../Pages_Objects_Model/Swaglabs_App_Home_Page.resource
 Resource   ../Pages_Objects_Model/Swaglabs_Product_Page.resource
 Resource   ../Pages_Objects_Model/Home_Page.resource
@@ -24,12 +28,11 @@ Set Env Vars For Username 4 In Swaglabs
     ${SWAG_LABS_USERNAME_4}=    Get Env Variable    SWAG_LABS_USERNAME_4
     Set Suite Variable    ${SWAG_LABS_USERNAME_4}
 
-
 Set Env Vars For Password In Swaglabs
     ${SWAG_LABS_PASSWORD}=    Get Env Variable    SWAG_LABS_PASSWORD
     Set Suite Variable    ${SWAG_LABS_PASSWORD}
 
-I Am On SwagLabs Loginpage
+I Am On SwagLabs Login Page
    Log To Console    I'm starting to try to login on SwagLabs app
 
 Im Try To Login On The App With First Username "${SWAG_LABS_USERNAME_1}" And Password "${BAD_PASSWORD}"
@@ -106,7 +109,7 @@ I Should See Error Messages That Password Does Not Match My Username
    Element Should Be Visible  ${ERROR_MESSAGES_NOT_RIGHT_PASSWORD_OR_USERNAME}
    Element Text Should Be     ${ERROR_MESSAGES_NOT_RIGHT_PASSWORD_OR_USERNAME}   Username and password do not match any user in this service.  
 
-I Should See Error Messages That Username Does Not Match My Passowed 
+I Should See Error Messages That Username Does Not Match My Password 
    Element Should Be Visible  ${ERROR_MESSAGES_NOT_RIGHT_PASSWORD_OR_USERNAME}
    Element Text Should Be     ${ERROR_MESSAGES_NOT_RIGHT_PASSWORD_OR_USERNAME}   Username and password do not match any user in this service.
 
@@ -136,11 +139,11 @@ I Should See List Of Available Products
    Page Should Contain Element   ${SWAG_LABS_HOMEPAGE}
    Sleep    10s 
 
-I Try To Scrool on Loginpage
+I Try To Scrool on Login page
   Click Element   ${ELEMENT_XPATH_SWAG_LABS_APP_ICON}
-  Wait Until Element Is Visible    ${Scroll_Loginpage}
-  Click Element  ${Scroll_Loginpage}
-  Scroll Down    ${Scroll_Loginpage}
+  Wait Until Element Is Visible    ${SCROOL_LOGIN_PAGE}
+  Click Element  ${SCROOL_LOGIN_PAGE}
+  Scroll Down    ${SCROOL_LOGIN_PAGE}
   Wait Until Element Is Visible    ${Text_About_Password} 
   
 

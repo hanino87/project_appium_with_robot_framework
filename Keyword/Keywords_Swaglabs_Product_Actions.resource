@@ -1,7 +1,11 @@
 *** Settings ***
+
+Documentation     This is a resource file, that contains keywords for Swaglabs product actions
+
 Library    AppiumLibrary
 Library    String
 Library    ../LoadEnv.py  # Ensure this path is correct
+
 Resource   ../Pages_Objects_Model/Swaglabs_App_Home_Page.resource
 Resource   ../Pages_Objects_Model/Swaglabs_Cart_Page.resource
 Resource   ../Pages_Objects_Model/Swaglabs_Checkout_Information_Page.resource
@@ -23,13 +27,13 @@ I Can Add A Product To Cart
   Tap With Number Of Taps   ${ADD_TO_CART_BUTTON1}   1   1 
   Element Should Not Contain Text    ${ADD_TO_CART_BUTTON1}    ADD TO CART
 
-I Can Verify That Its One Product In The Cart 
+I Can Verify That It's One Product In The Cart 
   Scroll Up  ${SWAG_LABS_CART_ICON_WITH_ONE_PRODUCT} 
   Wait Until Element Is Visible   ${SWAG_LABS_CART_ICON_WITH_ONE_PRODUCT}    timeout=10s 
   Page Should Not Contain Element    ${SWAG_LABS_CART_ICON_EMPTY_BASKET} 
  
 
-I Can Verify That Its Three Product In The Cart 
+I Can Verify That It's Three Product In The Cart 
   Scroll Up  ${SWAG_LABS_SCROOL_ELEMENT}
   Wait Until Element Is Visible   ${SWAG_LABS_CART_ICON_WITH_THREE_PRODUCTS}    timeout=10s 
   Page Should contain Element    ${SWAG_LABS_CART_ICON_WITH_THREE_PRODUCTS}  
@@ -43,18 +47,18 @@ I Should Be Able To Click On The Cart Icon
   Element Should Be Enabled    ${SWAG_LABS_CART_ICON_WITH_ONE_PRODUCT} 
   Click Element    ${SWAG_LABS_CART_ICON_WITH_ONE_PRODUCT} 
 
-I Can Add Two More Product To My Cart With Diffrent Search Option 
+I Can Add Two More Product To My Cart With Different Search Options 
   Element Should Be Enabled    ${PRODUCT_SELECTOR_BUTTON} 
   Tap With Number Of Taps     ${PRODUCT_SELECTOR_BUTTON}     1  1
   Element Should Be Enabled    ${DROPLIST_OPTION_SORT_PRICE_LOW_TO_HIGH}
   Tap With Number Of Taps    ${PRODUCT_CHANGE_VIEW_OF_PRODUCTS}     1    1
   Tap With Number Of Taps   ${DROPLIST_OPTION_SORT_Z_TO_A}  1  1 
-  log    I take a picture to show that procuts have been sorted diffrent 
+  log    I take a picture as evidence
   Capture Page Screenshot
-  Scroll Down   ${Swag_Labs_Scrool_Element}
-  Scroll Down   ${Swag_Labs_Scrool_Element}
-  Scroll Up    ${Swag_Labs_Scrool_Element}
-  Scroll Up    ${Swag_Labs_Scrool_Element}
+  Scroll Down   ${SWAG_LABS_SCROOL_ELEMENT}
+  Scroll Down   ${SWAG_LABS_SCROOL_ELEMENT}
+  Scroll Up    ${SWAG_LABS_SCROOL_ELEMENT}
+  Scroll Up    ${SWAG_LABS_SCROOL_ELEMENT}
   Wait Until Element Is Visible    ${PRODUCT2_IMAGE}   
   Tap With Number Of Taps  ${PRODUCT2_IMAGE}  1  1 
   Scroll Down  ${PRODUCT2_IMAGE}
@@ -67,11 +71,11 @@ I Can Add Two More Product To My Cart With Diffrent Search Option
   scroll up  ${SWAG_LABS_SCROOL_ELEMENT}
   Tap With Number Of Taps     ${PRODUCT_SELECTOR_BUTTON}     1  1
   Tap With Number Of Taps   ${DROPLIST_OPTION_SORT_PRICE_LOW_TO_HIGH}  1  1
-  log    I take a picture to show that procuts have been sorted diffrent 
+  log    I take a picture as evidence
   Capture Page Screenshot
-  Scroll down   ${Swag_Labs_Scrool_Element}
-  Scroll down   ${Swag_Labs_Scrool_Element}
-  Scroll up   ${Swag_Labs_Scrool_Element}
+  Scroll down   ${SWAG_LABS_SCROOL_ELEMENT}
+  Scroll down   ${SWAG_LABS_SCROOL_ELEMENT}
+  Scroll up    ${SWAG_LABS_SCROOL_ELEMENT}
   Wait Until Page Contains Element    ${PRODUCT3_IMAGE}
   Tap With Number Of Taps    ${PRODUCT3_IMAGE}  1   1 
   Scroll Down  ${PRODUCT3_IMAGE}
@@ -115,10 +119,9 @@ I Can Close The Case And Go Back To Product List
   Click Element    ${BACK_HOME_BUTTON}  
   Wait Until Page Does Not Contain Element    ${BACK_HOME_BUTTON}  
   Element Should Be Visible    ${SWAG_LABS_HOMEPAGE}   
-  Log  Im done with my order now i will search for annother product 
+  Log  I'm done with my order now i will search for annother product 
 
 
-### TODO ### IMPLEMENT PYTHON FUNCTION THAT GENERATES FAKED FIRSTNAME AND LASTNAME AND POSTCODE 
 
 
 
