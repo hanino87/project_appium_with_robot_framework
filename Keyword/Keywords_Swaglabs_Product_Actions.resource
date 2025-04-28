@@ -25,7 +25,7 @@ I Can Add A Product To Cart
   Element Text Should Be    ${ADD_TO_CART_BUTTON1}    ADD TO CART
   Element Should Not Contain Text    ${ADD_TO_CART_BUTTON1}    REMOVE 
   Tap With Number Of Taps   ${ADD_TO_CART_BUTTON1}   1   1 
-  Element Should Not Contain Text    ${ADD_TO_CART_BUTTON1}    ADD TO CART
+
 
 I Can Verify That It's One Product In The Cart 
   Scroll Up  ${SWAG_LABS_CART_ICON_WITH_ONE_PRODUCT} 

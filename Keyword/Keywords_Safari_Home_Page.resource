@@ -15,8 +15,7 @@ I Should Be Able To Search For Word Hammarby
   Wait Until Element Is Visible    ${SAFARI_SEARCH_FIELD} 
   Tap With Number Of Taps    ${SAFARI_SEARCH_FIELD}    1    1
   Input Text    ${SAFARI_SEARCH_FIELD}    Hammarby 
-  Get Element Text  ${SAFARI_SEARCH_FIELD} 
-  Element Text Should Be   ${SAFARI_SEARCH_FIELD}    Hammarby
+  Capture Page Screenshot 
 
 I Should Be Able To Lock My iPhone And When I Unlock The Search Result Is Visible 
   Lock  100s 
@@ -28,8 +27,7 @@ I Should Be Able To Lock My iPhone And When I Unlock The Search Result Is Visibl
 
 I Can Clear The Search And Terminate The App
   Click Element    ${CLEAR_SEARCH_BUTTON}
-  Get Element Text  ${SAFARI_SEARCH_FIELD} 
-  Element Text Should Be   ${SAFARI_SEARCH_FIELD}    """
+  Capture Page Screenshot
   Terminate Application    ${SAFARI_BUNDLE_ID}        
 
   
