@@ -20,7 +20,7 @@ Resource    ../../Keyword/Keywords_Home_Page.resource
 Validate Swipe On iPhone 
   When I Am On A Page On My iPhone
   Given I Start To Swipe With My Fingers 
-  Then I Should Be Able To Swipe Around Some Pages
+  Then I Should Be Able To Swipe Ar# ound Some Pages
 
 Validate Scrool And Tap On iPhone
   When I Am On A Page On My iPhone

@@ -19,7 +19,7 @@ I Am In Product View Page After Login
   Open Application    ${url}    platformName=${platform_name}    automationName=${automation_name}    platformVersion=${platform_version}    deviceName=${device_name}    newCommandTimeout=${new_command_timeout}    connectHardwareKeyboard=${connect_hardware_keyboard}    udid=${udid} 
   Set Env Vars For Username 1 In Swaglabs
   Set Env Vars For Password In Swaglabs
-  Im Try To Login On The App With Third Username "${SWAG_LABS_USERNAME_1}" And Password "${SWAG_LABS_PASSWORD}"
+  Im Try To Login On The App With Correct Username "${SWAG_LABS_USERNAME_1}" And Password "${SWAG_LABS_PASSWORD}"
   log  Im in the views for products after i logged into the system 
   
 
