@@ -71,7 +71,7 @@ The plan is to create and write the testcase according to Robot Frameworks BBD(B
 
     The structre is broken down in three parts: 
   
-    • Given: Describes where your test starts 
+    • Given: Describes the prerequisites for test cases
 
     • When:  Specifies the action in your test
 
@@ -87,15 +87,15 @@ The plan is to create and write the testcase according to Robot Frameworks BBD(B
    
     Validate Swipe On iPhone  (Test Case Name)
 
-    When I Am On A Page On My iPhone
-    Given I Start To Swipe With My Fingers 
+    GIVEN I Am On A Page On My iPhone
+    WHEN I Start To Swipe With My Fingers 
     Then I Should Be Able To Swipe Around Some Pages  
 
     Click On A Prouct To View More Detail About It (Test Case Name)
    
-    When I Am In Product View Page
-    Given I should be able to scroll up and down 
-    Then I should Click On Product Picture To Get More Information About It
+    GIVEN I Am In Product View Page
+    WHEN I scroll up and down 
+    THEN I should Click On Product Picture To Get More Information About It
     AND I Can Go Back To See The Other Products
   
     For mer info follow link:
