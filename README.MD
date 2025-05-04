@@ -67,15 +67,15 @@ The plan is to create and write the testcase according to Robot Frameworks BBD(B
 
 • 🧪 BDD (Behavior-Driven Development)
 
-    It is based on the Given-When-Then syntax, a structured format used to write clear user stories and acceptance criteria—crucial for effective testing.
+    It is based on the GIVEN-WHEN-THEN syntax, a structured format used to write clear user stories and acceptance criteria—crucial for effective testing.
 
     The structre is broken down in three parts: 
   
-    • Given: Describes the prerequisites for test cases
+    • GIVEN: Describes the prerequisites for test cases
 
-    • When:  Specifies the action in your test
+    • WHEN:  Specifies the action in your test
 
-    • Then: Defines the expected outcome of the test
+    • THEN: Defines the expected outcome of the test
 
     And the extra step in BBD:
     
