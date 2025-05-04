@@ -113,7 +113,7 @@ The plan is to create and write the testcase according to Robot Frameworks BBD(B
 
     Demo of the application on web: 🔗 https://www.saucedemo.com/v1/
 
-### Setup Device 
+
 
 
 
